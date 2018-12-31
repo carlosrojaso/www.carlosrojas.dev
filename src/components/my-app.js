@@ -37,19 +37,19 @@ class MyApp extends connect(store)(LitElement) {
           display: block;
 
           --app-primary-color: #ed6603;
-          --app-secondary-color: #293237;
-          --app-dark-text-color: var(--app-secondary-color);
-          --app-light-text-color: white;
-          --app-section-even-color: #f7f7f7;
+          --app-secondary-color: #fcd920;
+          --app-dark-text-color: #293237;
+          --app-light-text-color: #e1c294;
           --app-section-odd-color: white;
+          --app-section-even-color: #e1c294;
 
-          --app-header-background-color: white;
+          --app-header-background-color: var(--app-primary-color);
           --app-header-text-color: var(--app-dark-text-color);
-          --app-header-selected-color: var(--app-primary-color);
+          --app-header-selected-color: var(--app-secondary-color);
 
-          --app-drawer-background-color: var(--app-secondary-color);
-          --app-drawer-text-color: var(--app-light-text-color);
-          --app-drawer-selected-color: #78909c;
+          --app-drawer-background-color: var(--app-primary-color);
+          --app-drawer-text-color: var(--app-dark-text-color);
+          --app-drawer-selected-color: var(--app-dark-text-color);
         }
 
         app-header {
@@ -60,7 +60,7 @@ class MyApp extends connect(store)(LitElement) {
           text-align: center;
           background-color: var(--app-header-background-color);
           color: var(--app-header-text-color);
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid var(--app-header-selected-color);
         }
 
         .toolbar-top {
@@ -72,8 +72,8 @@ class MyApp extends connect(store)(LitElement) {
           text-transform: lowercase;
           font-size: 30px;
           /* In the narrow layout, the toolbar is offset by the width of the
-        drawer button, and the text looks not centered. Add a padding to
-        match that button */
+          drawer button, and the text looks not centered. Add a padding to
+          match that button */
           padding-right: 44px;
         }
 
@@ -92,6 +92,16 @@ class MyApp extends connect(store)(LitElement) {
         .toolbar-list > a[selected] {
           color: var(--app-header-selected-color);
           border-bottom: 4px solid var(--app-header-selected-color);
+        }
+
+        .toolbar-list > a[target="_blank"]:after,
+        .drawer-list > a[target="_blank"]:after,
+        .footer-list > a[target="_blank"]:after {
+          content: url("images/new-window-yellow.svg");
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          margin-left: 4px;
         }
 
         .menu-btn {
@@ -147,10 +157,18 @@ class MyApp extends connect(store)(LitElement) {
           background: var(--app-drawer-background-color);
           color: var(--app-drawer-text-color);
           text-align: center;
+          text-transform: uppercase;
+          font-size: 10px;
+        }
+
+        .footer-list > a {
+          text-decoration: none;
+          color: var(--app-drawer-text-color);
+          padding: 0 12px;
         }
 
         /* Wide layout: when the viewport width is bigger than 460px, layout
-      changes to a wide layout. */
+        changes to a wide layout. */
         @media (min-width: 460px) {
           .toolbar-list {
             display: block;
@@ -165,7 +183,7 @@ class MyApp extends connect(store)(LitElement) {
           }
 
           /* The drawer button isn't shown in the wide layout, so we don't
-        need to offset the title */
+          need to offset the title */
           [main-title] {
             padding-right: 0px;
           }
@@ -187,9 +205,28 @@ class MyApp extends connect(store)(LitElement) {
 
         <!-- This gets hidden on a small screen-->
         <nav class="toolbar-list">
-          <a ?selected="${this._page === "Home"}" href="/">View One</a>
-          <a ?selected="${this._page === "view2"}" href="/view2">View Two</a>
-          <a ?selected="${this._page === "view3"}" href="/view3">View Three</a>
+          <a ?selected="${this._page === "Home"}" href="/">Home</a>
+          <a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/"
+            >Shop</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="http://whatdoesthisallmeanpodcast.com/"
+            >Podcast</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.teardropsandballoons.com/"
+            >Poetry</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog"
+            >Blog</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate"
+            >Hate Mail</a
+          >
         </nav>
       </app-header>
 
@@ -199,24 +236,57 @@ class MyApp extends connect(store)(LitElement) {
         @opened-changed="${this._drawerOpenedChanged}"
       >
         <nav class="drawer-list">
-          <a ?selected="${this._page === "Home"}" href="/">View One</a>
-          <a ?selected="${this._page === "view2"}" href="/view2">View Two</a>
-          <a ?selected="${this._page === "view3"}" href="/view3">View Three</a>
+          <a ?selected="${this._page === "Home"}" href="/">Home</a>
+          <a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/"
+            >Shop</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="http://whatdoesthisallmeanpodcast.com/"
+            >Podcast</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.teardropsandballoons.com/"
+            >Poetry</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog"
+            >Blog</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate"
+            >Hate Mail</a
+          >
         </nav>
       </app-drawer>
 
       <!-- Main content -->
       <main role="main" class="main-content">
-        <my-view1 class="page" ?active="${this._page === "Home"}"></my-view1>
-        <my-view2 class="page" ?active="${this._page === "view2"}"></my-view2>
-        <my-view3 class="page" ?active="${this._page === "view3"}"></my-view3>
+        <my-home class="page" ?active="${this._page === "Home"}"></my-home>
         <my-view404
           class="page"
           ?active="${this._page === "view404"}"
         ></my-view404>
       </main>
 
-      <footer><p>Made with &hearts; by the Polymer team.</p></footer>
+      <footer>
+        <p>&copy; 2019 Mike Posner Offical Website. All Rights Reserved.</p>
+        <nav class="footer-list">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="http://privacypolicy.umusic.com/"
+            >Privacy Policy</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="http://privacypolicy.umusic.com/terms/"
+            >Terms of Use</a
+          >
+        </nav>
+      </footer>
 
       <snack-bar ?active="${this._snackbarOpened}">
         You are now ${this._offline ? "offline" : "online"}.</snack-bar

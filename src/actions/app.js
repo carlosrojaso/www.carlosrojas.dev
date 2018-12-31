@@ -29,9 +29,9 @@ export const navigate = path => dispatch => {
 const loadPage = page => dispatch => {
   switch (page) {
     case "Home":
-      import("../components/my-view1.js").then(module => {
+      import("../components/home.js").then(module => {
         // Put code in here that you want to run every time when
-        // navigating to view1 after my-view1.js is loaded.
+        // navigating to view1 after home.js is loaded.
       });
       break;
     case "view2":
