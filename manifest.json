@@ -1,0 +1,21 @@
+{
+  "name": "Mike Posner",
+  "short_name": "Mike Posner",
+  "description": "Official Website for Mike Posner. A Real Good Kid Avaialable Jan. 18th.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ed6603",
+  "background_color": "#ed6603",
+  "icons": [
+    {
+      "src": "images/manifest/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/manifest/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
