@@ -64,6 +64,7 @@ class Home extends PageViewElement {
             <div class="option apple-music">
               <h3>Apple Music</h3>
               <iframe
+                title="Apple Music Embed"
                 allow="autoplay *; encrypted-media *;"
                 frameborder="0"
                 height="380"
@@ -75,6 +76,7 @@ class Home extends PageViewElement {
             <div class="option spotify">
               <h3>Spotify</h3>
               <iframe
+                title="Spotify Embed"
                 src="https://open.spotify.com/embed/user/officialmikeposner/playlist/0CQgU6sHvsuglnOKlpP9Jz"
                 width="300"
                 height="380"
