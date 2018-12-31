@@ -33,6 +33,7 @@ import {
   twitter,
   youtube
 } from "./my-icons.js";
+import "./nav-links.js";
 import "./snack-bar.js";
 
 class MyApp extends connect(store)(LitElement) {
@@ -238,30 +239,19 @@ class MyApp extends connect(store)(LitElement) {
           <div main-title>${this.appTitle}</div>
         </app-toolbar>
 
-        <!-- This gets hidden on a small screen-->
         <nav class="toolbar-list">
-          <a ?selected="${this._page === "Home"}" href="/">Home</a>
-          <a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/"
-            >Shop</a
+          <a ?selected="${this._page === "Home"}" href="/">Join The Walk</a>
+          <a ?selected="${this._page === "Discography"}" href="/Discography"
+            >Discography</a
           >
+          <a ?selected="${this._page === "Tour"}" href="/tour">Tour</a>
+          <a ?selected="${this._page === "Mission"}" href="/mission">Mission</a>
           <a
-            target="_blank"
-            rel="noreferrer"
-            href="http://whatdoesthisallmeanpodcast.com/"
-            >Podcast</a
+            ?selected="${this._page === "Accomplishments"}"
+            href="/Accomplishments"
+            >Accomplishments</a
           >
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.teardropsandballoons.com/"
-            >Poetry</a
-          >
-          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog"
-            >Blog</a
-          >
-          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate"
-            >Hate Mail</a
-          >
+          <a ?selected="${this._page === "To-Do"}" href="/To-Do">To Do</a>
         </nav>
       </app-header>
 
@@ -271,34 +261,33 @@ class MyApp extends connect(store)(LitElement) {
         @opened-changed="${this._drawerOpenedChanged}"
       >
         <nav class="drawer-list">
-          <a ?selected="${this._page === "Home"}" href="/">Home</a>
-          <a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/"
-            >Shop</a
+          <a ?selected="${this._page === "Home"}" href="/">Join The Walk</a>
+          <a ?selected="${this._page === "Discography"}" href="/Discography"
+            >Discography</a
           >
+          <a ?selected="${this._page === "Tour"}" href="/tour">Tour</a>
+          <a ?selected="${this._page === "Mission"}" href="/mission">Mission</a>
           <a
-            target="_blank"
-            rel="noreferrer"
-            href="http://whatdoesthisallmeanpodcast.com/"
-            >Podcast</a
+            ?selected="${this._page === "Accomplishments"}"
+            href="/accomplishments"
+            >Accomplishments</a
           >
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.teardropsandballoons.com/"
-            >Poetry</a
-          >
-          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog"
-            >Blog</a
-          >
-          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate"
-            >Hate Mail</a
-          >
+          <a ?selected="${this._page === "To-Do"}" href="/To-Do">To Do</a>
         </nav>
       </app-drawer>
 
       <!-- Main content -->
       <main role="main" class="main-content">
         <my-home class="page" ?active="${this._page === "Home"}"></my-home>
+        <my-accomplishments
+          class="page"
+          ?active="${this._page === "Accomplishments"}"
+        ></my-accomplishments>
+        <my-discography
+          class="page"
+          ?active="${this._page === "Discography"}"
+        ></my-discography>
+        <my-todo class="page" ?active="${this._page === "To-Do"}"></my-todo>
         <my-view404
           class="page"
           ?active="${this._page === "view404"}"
@@ -319,6 +308,29 @@ class MyApp extends connect(store)(LitElement) {
             rel="noreferrer"
             href="http://privacypolicy.umusic.com/terms/"
             >Terms of Use</a
+          >
+        </nav>
+        <nav class="affiliate-links">
+          <a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/"
+            >Shop</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="http://whatdoesthisallmeanpodcast.com/"
+            >Podcast</a
+          >
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.teardropsandballoons.com/"
+            >Poetry</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog"
+            >Blog</a
+          >
+          <a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate"
+            >Hate Mail</a
           >
         </nav>
         <div class="social-links">

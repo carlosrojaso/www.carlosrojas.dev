@@ -34,12 +34,21 @@ const loadPage = page => dispatch => {
         // navigating to view1 after home.js is loaded.
       });
       break;
-    // case "view2":
-    //   import("../components/my-view2.js");
-    //   break;
-    // case "view3":
-    //   import("../components/my-view3.js");
-    //   break;
+    case "Discography":
+      import("../components/discography.js");
+      break;
+    case "Tour":
+      import("../components/tour.js");
+      break;
+    case "Mission":
+      import("../components/mission.js");
+      break;
+    case "Accomplishments":
+      import("../components/accomplishments.js");
+      break;
+    case "To-Do":
+      import("../components/to-do.js");
+      break;
     default:
       page = "view404";
       import("../components/my-view404.js");
