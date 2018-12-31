@@ -17,10 +17,6 @@ class Home extends PageViewElement {
     return html`
       ${SharedStyles}
       <style>
-        #walk-across-america {
-          background: map;
-        }
-
         .listening-options {
           display: flex;
           align-items: center;
@@ -45,10 +41,9 @@ class Home extends PageViewElement {
       <section id="walk-across-america">
         <div class="container">
           <h2>Walk Across America</h2>
-          <p>
-            Catch me outside! I'll be walking to a town near you. Follow me on
-            Twitter to stay updated.
-          </p>
+          <h3>
+            Catch me outside! I'll be walking to a town near you (probably)!
+          </h3>
           <picture>
             <!-- Uses WebP Format when available with fallback on JPG for older browsers -->
             <source srcset="images/posner.webp" type="image/webp" />

@@ -24,7 +24,15 @@ import { installRouter } from "pwa-helpers/router.js";
 import { navigate, updateDrawerState, updateOffline } from "../actions/app.js";
 // This element is connected to the Redux store.
 import { store } from "../store.js";
-import { menuIcon } from "./my-icons.js";
+import {
+  facebook,
+  instagram,
+  menuIcon,
+  spotify,
+  tumblr,
+  twitter,
+  youtube
+} from "./my-icons.js";
 import "./snack-bar.js";
 
 class MyApp extends connect(store)(LitElement) {
@@ -167,6 +175,33 @@ class MyApp extends connect(store)(LitElement) {
           padding: 0 12px;
         }
 
+        .social-links {
+          margin-top: 1em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .social-links div {
+          width: 20px;
+          height: auto;
+          margin-right: 12px;
+        }
+
+        .social-links div:last-child {
+          margin-right: 0;
+        }
+
+        .social-links svg {
+          fill: var(--app-secondary-color);
+          transition: all 200ms ease;
+        }
+
+        .social-links svg:hover {
+          fill: white;
+          transition: all 200ms ease;
+        }
+
         /* Wide layout: when the viewport width is bigger than 460px, layout
         changes to a wide layout. */
         @media (min-width: 460px) {
@@ -286,6 +321,56 @@ class MyApp extends connect(store)(LitElement) {
             >Terms of Use</a
           >
         </nav>
+        <div class="social-links">
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/youtube"
+              >${youtube}</a
+            >
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/twitter"
+              >${twitter}</a
+            >
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/instagram"
+              >${instagram}</a
+            >
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/facebook"
+              >${facebook}</a
+            >
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/tumblr"
+              >${tumblr}</a
+            >
+          </div>
+          <div>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://mikeposner.co/posnerspotify"
+              >${spotify}</a
+            >
+          </div>
+        </div>
       </footer>
 
       <snack-bar ?active="${this._snackbarOpened}">
