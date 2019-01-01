@@ -28,6 +28,7 @@ import {
   facebook,
   instagram,
   menuIcon,
+  mikePosner,
   spotify,
   tumblr,
   twitter,
@@ -45,20 +46,23 @@ class MyApp extends connect(store)(LitElement) {
           --app-drawer-width: 256px;
           display: block;
 
-          --app-primary-color: #ed6603;
-          --app-secondary-color: #fcd920;
-          --app-dark-text-color: #293237;
-          --app-light-text-color: #e1c294;
+          --app-primary-color: #ff6b00;
+          --app-secondary-color: #f1d09f;
+          --app-tertiary-color: #673918;
+          --app-dark-text-color: var(--app-tertiary-color);
+          --app-light-text-color: var(--app-secondary-color);
           --app-section-odd-color: white;
-          --app-section-even-color: #e1c294;
+          --app-section-even-color: var(--app-secondary-color);
 
           --app-header-background-color: var(--app-primary-color);
-          --app-header-text-color: var(--app-dark-text-color);
-          --app-header-selected-color: var(--app-secondary-color);
+          --app-header-text-color: var(--app-primary-color);
+          --app-header-selected-color: var(--app-tertiary-color);
+          --app-header-hover-color: var(--app-secondary-color);
 
           --app-drawer-background-color: var(--app-primary-color);
-          --app-drawer-text-color: var(--app-dark-text-color);
-          --app-drawer-selected-color: var(--app-dark-text-color);
+          --app-drawer-text-color: var(--app-secondary-color);
+          --app-drawer-selected-color: var(--app-tertiary-color);
+          --app-drawer-hover-color: var(--app-selected-color);
         }
 
         app-header {
@@ -67,23 +71,24 @@ class MyApp extends connect(store)(LitElement) {
           left: 0;
           width: 100%;
           text-align: center;
-          background-color: var(--app-header-background-color);
+          /* background-color: var(--app-header-background-color); */
           color: var(--app-header-text-color);
           border-bottom: 1px solid var(--app-header-selected-color);
         }
 
         .toolbar-top {
-          background-color: var(--app-header-background-color);
+          background-color: white;
         }
 
         [main-title] {
-          font-family: "Pacifico";
-          text-transform: lowercase;
-          font-size: 30px;
-          /* In the narrow layout, the toolbar is offset by the width of the
-          drawer button, and the text looks not centered. Add a padding to
-          match that button */
           padding-right: 44px;
+          height: 100%;
+        }
+
+        [main-title] > svg {
+          height: 100%;
+          padding: 0.5em 0;
+          box-sizing: border-box;
         }
 
         .toolbar-list {
@@ -96,6 +101,7 @@ class MyApp extends connect(store)(LitElement) {
           text-decoration: none;
           line-height: 30px;
           padding: 4px 24px;
+          transition: all 200ms ease;
         }
 
         .toolbar-list > a[selected] {
@@ -103,14 +109,21 @@ class MyApp extends connect(store)(LitElement) {
           border-bottom: 4px solid var(--app-header-selected-color);
         }
 
+        .toolbar-list > a:hover:not([selected]) {
+          color: var(--app-header-hover-color);
+          transition: all 200ms ease;
+        }
+
         .toolbar-list > a[target="_blank"]:after,
         .drawer-list > a[target="_blank"]:after,
-        .footer-list > a[target="_blank"]:after {
+        .footer-list > a[target="_blank"]:after,
+        .affiliate-links > a[target="_blank"]:after {
           content: url("images/new-window-yellow.svg");
           display: inline-block;
           width: 15px;
           height: 15px;
           margin-left: 4px;
+          margin-bottom: -8px;
         }
 
         .menu-btn {
@@ -137,6 +150,7 @@ class MyApp extends connect(store)(LitElement) {
           color: var(--app-drawer-text-color);
           line-height: 40px;
           padding: 0 24px;
+          transition: all 200ms ease;
         }
 
         .drawer-list > a[selected] {
@@ -164,16 +178,28 @@ class MyApp extends connect(store)(LitElement) {
         footer {
           padding: 24px;
           background: var(--app-drawer-background-color);
-          color: var(--app-drawer-text-color);
+          color: var(--app-tertiary-color);
           text-align: center;
           text-transform: uppercase;
           font-size: 10px;
         }
 
-        .footer-list > a {
+        .affiliate-links {
+          margin-top: 1em;
+        }
+
+        .footer-list > a,
+        .affiliate-links > a {
           text-decoration: none;
-          color: var(--app-drawer-text-color);
+          color: var(--app-tertiary-color);
           padding: 0 12px;
+          transition: all 200ms ease;
+        }
+
+        .footer-list > a:hover,
+        .affiliate-links > a:hover {
+          color: var(--app-secondary-color);
+          transition: all 200ms ease;
         }
 
         .social-links {
@@ -194,12 +220,12 @@ class MyApp extends connect(store)(LitElement) {
         }
 
         .social-links svg {
-          fill: var(--app-secondary-color);
+          fill: var(--app-tertiary-color);
           transition: all 200ms ease;
         }
 
         .social-links svg:hover {
-          fill: white;
+          fill: var(--app-secondary-color);
           transition: all 200ms ease;
         }
 
@@ -236,7 +262,7 @@ class MyApp extends connect(store)(LitElement) {
           >
             ${menuIcon}
           </button>
-          <div main-title>${this.appTitle}</div>
+          <span main-title>${mikePosner}</span>
         </app-toolbar>
 
         <nav class="toolbar-list">
@@ -265,11 +291,11 @@ class MyApp extends connect(store)(LitElement) {
           <a ?selected="${this._page === "Discography"}" href="/Discography"
             >Discography</a
           >
-          <a ?selected="${this._page === "Tour"}" href="/tour">Tour</a>
-          <a ?selected="${this._page === "Mission"}" href="/mission">Mission</a>
+          <a ?selected="${this._page === "Tour"}" href="/Tour">Tour</a>
+          <a ?selected="${this._page === "Mission"}" href="/Mission">Mission</a>
           <a
             ?selected="${this._page === "Accomplishments"}"
-            href="/accomplishments"
+            href="/Accomplishments"
             >Accomplishments</a
           >
           <a ?selected="${this._page === "To-Do"}" href="/To-Do">To Do</a>
