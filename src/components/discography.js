@@ -18,7 +18,9 @@ class Discography extends PageViewElement {
     return html`
       ${SharedStyles}
       <section>
-        <h2>Discography - These are all the albums/projects I’ve evermade.</h2>
+        <h2 class="text-left">
+          Discography - These are all the albums/projects I’ve evermade.
+        </h2>
         <ol>
           <li>
             2006 - Reflections of a Lost Teen - This was the album I produced in

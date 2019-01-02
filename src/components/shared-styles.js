@@ -20,6 +20,7 @@ export const SharedStyles = html`
     section {
       padding: 24px;
       background: var(--app-section-odd-color);
+      min-height: calc(100vh - 301px);
     }
 
     section > * {
@@ -42,9 +43,18 @@ export const SharedStyles = html`
       text-align: center;
     }
 
+    p {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
     @media (min-width: 460px) {
       h2 {
         font-size: 36px;
+      }
+
+      section {
+        min-height: calc(100vh - 327px);
       }
     }
 
@@ -59,6 +69,10 @@ export const SharedStyles = html`
       color: var(--app-light-text-color);
       font-size: 30px;
       line-height: 64px;
+    }
+
+    .text-left {
+      text-align: left !important;
     }
   </style>
 `;

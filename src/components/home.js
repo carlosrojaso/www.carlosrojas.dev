@@ -41,9 +41,6 @@ class Home extends PageViewElement {
       <section id="walk-across-america">
         <div class="container">
           <h2>Walk Across America</h2>
-          <h3>
-            Catch me outside! I'll be walking to a town near you (probably)!
-          </h3>
           <picture>
             <!-- Uses WebP Format when available with fallback on JPG for older browsers -->
             <source srcset="images/posner.webp" type="image/webp" />

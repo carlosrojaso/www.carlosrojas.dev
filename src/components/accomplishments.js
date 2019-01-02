@@ -18,7 +18,9 @@ class Accomplishments extends PageViewElement {
     return html`
       ${SharedStyles}
       <section>
-        <h2>Random and Subtly Pretentious List of Accomplishments</h2>
+        <h2 class="text-left">
+          Random and Subtly Pretentious List of Accomplishments
+        </h2>
         <ol>
           <li>Graduated from Duke University</li>
           <li>Made a bunch of songs</li>

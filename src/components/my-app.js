@@ -34,7 +34,6 @@ import {
   twitter,
   youtube
 } from "./my-icons.js";
-import "./nav-links.js";
 import "./snack-bar.js";
 
 class MyApp extends connect(store)(LitElement) {
@@ -123,7 +122,6 @@ class MyApp extends connect(store)(LitElement) {
           width: 15px;
           height: 15px;
           margin-left: 4px;
-          margin-bottom: -8px;
         }
 
         .menu-btn {
@@ -164,7 +162,6 @@ class MyApp extends connect(store)(LitElement) {
 
         .main-content {
           padding-top: 64px;
-          min-height: 100vh;
         }
 
         .page {
@@ -185,7 +182,7 @@ class MyApp extends connect(store)(LitElement) {
         }
 
         .affiliate-links {
-          margin-top: 1em;
+          margin-top: 16px;
         }
 
         .footer-list > a,
@@ -203,7 +200,7 @@ class MyApp extends connect(store)(LitElement) {
         }
 
         .social-links {
-          margin-top: 1em;
+          margin-top: 16px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -270,8 +267,8 @@ class MyApp extends connect(store)(LitElement) {
           <a ?selected="${this._page === "Discography"}" href="/Discography"
             >Discography</a
           >
-          <a ?selected="${this._page === "Tour"}" href="/tour">Tour</a>
-          <a ?selected="${this._page === "Mission"}" href="/mission">Mission</a>
+          <a ?selected="${this._page === "Tour"}" href="/Tour">Tour</a>
+          <a ?selected="${this._page === "Mission"}" href="/Mission">Mission</a>
           <a
             ?selected="${this._page === "Accomplishments"}"
             href="/Accomplishments"
@@ -305,14 +302,19 @@ class MyApp extends connect(store)(LitElement) {
       <!-- Main content -->
       <main role="main" class="main-content">
         <my-home class="page" ?active="${this._page === "Home"}"></my-home>
-        <my-accomplishments
-          class="page"
-          ?active="${this._page === "Accomplishments"}"
-        ></my-accomplishments>
         <my-discography
           class="page"
           ?active="${this._page === "Discography"}"
         ></my-discography>
+        <my-tour class="page" ?active="${this._page === "Tour"}"></my-tour>
+        <my-mission
+          class="page"
+          ?active="${this._page === "Mission"}"
+        ></my-mission>
+        <my-accomplishments
+          class="page"
+          ?active="${this._page === "Accomplishments"}"
+        ></my-accomplishments>
         <my-todo class="page" ?active="${this._page === "To-Do"}"></my-todo>
         <my-view404
           class="page"
