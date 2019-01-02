@@ -113,7 +113,7 @@ class MyApp extends connect(store)(LitElement) {
           transition: all 200ms ease;
         }
 
-        .toolbar-list > a[target="_blank"]:after,
+        /* .toolbar-list > a[target="_blank"]:after,
         .drawer-list > a[target="_blank"]:after,
         .footer-list > a[target="_blank"]:after,
         .affiliate-links > a[target="_blank"]:after {
@@ -122,7 +122,7 @@ class MyApp extends connect(store)(LitElement) {
           width: 15px;
           height: 15px;
           margin-left: 4px;
-        }
+        } */
 
         .menu-btn {
           background: none;

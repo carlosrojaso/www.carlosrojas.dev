@@ -20,7 +20,7 @@ class Tour extends PageViewElement {
       <section>
         <h2 class="text-left">Tour</h2>
         <p>
-          Iam spending this year walking across America :). That’s right, I’m
+          I am spending this year walking across America :). That’s right, I’m
           walking…like with my feet…all the way across. It will take me about a
           year. While I walk, I will be playing free surprise concerts for
           people. Follow me on instagram to keep up. @mikeposner
