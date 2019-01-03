@@ -142,5 +142,37 @@
 			"type": "script",
 			"weight": 1
 		}
+	},
+	"/about-me": {
+		"src/components/my-app.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"src/components/about.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+			"type": "script",
+			"weight": 1
+		}
+	},
+	"/listen": {
+		"src/components/my-app.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"src/components/listen.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+			"type": "script",
+			"weight": 1
+		}
 	}
 }
