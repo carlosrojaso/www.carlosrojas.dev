@@ -17,18 +17,7 @@ class Accomplishments extends PageViewElement {
 	render() {
 		return html`
 			${SharedStyles}
-			<style>
-				section {
-					min-height: calc(100vh - 301px);
-				}
-
-				@media (min-width: 460px) {
-					section {
-						min-height: calc(100vh - 327px);
-					}
-				}
-			</style>
-			<section>
+			<section class="min-height-fix">
 				<h2 class="text-left">Random and Subtly Pretentious List of Accomplishments</h2>
 				<ol>
 					<li>Graduated from Duke University</li>

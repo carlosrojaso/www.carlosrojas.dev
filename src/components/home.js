@@ -64,9 +64,28 @@ class Home extends PageViewElement {
 					margin-left: 24px;
 				}
 
-				@media (max-width: 460px) {
+				@media (max-width: 695px) {
+					.listening-options {
+						flex-direction: column;
+					}
+
 					.listening-options .option {
 						margin: 0;
+					}
+				}
+
+				@media (max-width: 1600px) {
+					#walk-across-america {
+						margin-top: 30px;
+					}
+
+					#walk-across-america > .container {
+						text-align: center;
+					}
+
+					#walk-across-america > .container > img,
+					#walk-across-america > .container > svg {
+						width: 80%;
 					}
 				}
 			</style>
@@ -76,6 +95,23 @@ class Home extends PageViewElement {
 					<!-- display: block -->
 					<!-- <img width="100%" src="images/state-map.svg" alt="Logo" /> -->
 					${stateMap}
+				</div>
+				<div class="sticky-left mobile-only">
+					<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
+					<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
+					<a class="listen-button" href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93" target="_blank" rel="noreferrer">
+						<img width="24px" src="images/spotify-icon.svg" alt="Spotify" />
+						<img width="80px" src="images/spotify-copy.svg" alt="Play on Spotify" />
+					</a>
+					<a
+						class="listen-button"
+						href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1443035104?mt=1&app=music"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img width="16px" src="images/apple-icon.svg" alt="Apple Music" />
+						<img width="106px" src="images/apple-copy.svg" alt="Play on Apple Music" />
+					</a>
 				</div>
 			</section>
 			<section id="listen">

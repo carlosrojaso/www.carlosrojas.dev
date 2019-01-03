@@ -17,18 +17,7 @@ class Discography extends PageViewElement {
 	render() {
 		return html`
 			${SharedStyles}
-			<style>
-				section {
-					min-height: calc(100vh - 301px);
-				}
-
-				@media (min-width: 460px) {
-					section {
-						min-height: calc(100vh - 327px);
-					}
-				}
-			</style>
-			<section>
+			<section class="min-height-fix">
 				<h2 class="text-left">Discography - These are all the albums/projects I’ve evermade.</h2>
 				<ol>
 					<li>

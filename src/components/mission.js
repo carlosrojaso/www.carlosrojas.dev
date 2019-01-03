@@ -17,18 +17,7 @@ class Mission extends PageViewElement {
 	render() {
 		return html`
 			${SharedStyles}
-			<style>
-				section {
-					min-height: calc(100vh - 301px);
-				}
-
-				@media (min-width: 460px) {
-					section {
-						min-height: calc(100vh - 327px);
-					}
-				}
-			</style>
-			<section>
+			<section class="min-height-fix">
 				<h2 class="text-left">My Mission</h2>
 				<p>My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
 			</section>

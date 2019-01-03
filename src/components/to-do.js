@@ -17,18 +17,7 @@ class ToDo extends PageViewElement {
 	render() {
 		return html`
 			${SharedStyles}
-			<style>
-				section {
-					min-height: calc(100vh - 301px);
-				}
-
-				@media (min-width: 460px) {
-					section {
-						min-height: calc(100vh - 327px);
-					}
-				}
-			</style>
-			<section>
+			<section class="min-height-fix">
 				<h2>Things I Still Want To Do Before I Die:</h2>
 				<ol>
 					<li>GO TO OUTER SPACE- number one bucket list thing for me.</li>

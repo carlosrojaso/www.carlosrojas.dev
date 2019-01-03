@@ -17,18 +17,7 @@ class Tour extends PageViewElement {
 	render() {
 		return html`
 			${SharedStyles}
-			<style>
-				section {
-					min-height: calc(100vh - 301px);
-				}
-
-				@media (min-width: 460px) {
-					section {
-						min-height: calc(100vh - 327px);
-					}
-				}
-			</style>
-			<section>
+			<section class="min-height-fix">
 				<h2 class="text-left">Tour</h2>
 				<p>
 					I am spending this year walking across America :). That’s right, I’m walking…like with my feet…all the way across. It will take me

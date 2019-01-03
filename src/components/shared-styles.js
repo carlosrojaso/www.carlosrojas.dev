@@ -47,7 +47,7 @@ export const SharedStyles = html`
 			margin-bottom: 16px;
 		}
 
-		@media (min-width: 460px) {
+		@media (min-width: 1200px) {
 			h2 {
 				font-size: 36px;
 			}
@@ -121,6 +121,62 @@ export const SharedStyles = html`
 
 		.listen-button > img:last-child {
 			margin-left: 12px;
+		}
+
+		.sticky-left {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.sticky-left.mobile-only {
+			display: flex;
+		}
+
+		@media (min-width: 600px) {
+			.sticky-left.mobile-only {
+				display: none;
+			}
+		}
+
+		.sticky-left > .logo {
+			margin-bottom: 36px;
+		}
+
+		.sticky-left > .listen {
+			margin-top: 28px;
+			margin-bottom: 22px;
+		}
+
+		.sticky-left > a:last-child {
+			margin-top: 8px;
+		}
+
+		.min-height-fix {
+			min-height: calc(100vh - 303px);
+		}
+
+		@media (min-width: 1200px) {
+			.min-height-fix {
+				min-height: calc(100vh - 346px);
+				padding-left: 378px;
+				padding-right: 68px;
+			}
+
+			.min-height-fix > * {
+				margin: 0;
+			}
+		}
+
+		@media (min-width: 1660px) {
+			.min-height-fix {
+				padding: 24px;
+			}
+
+			.min-height-fix > * {
+				margin: 0 auto;
+			}
 		}
 	</style>
 `;

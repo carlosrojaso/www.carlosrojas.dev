@@ -67,26 +67,6 @@ class MyApp extends connect(store)(LitElement) {
 					display: none;
 				}
 
-				.sticky-left {
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-					flex-direction: column;
-				}
-
-				.sticky-left > .logo {
-					margin-bottom: 36px;
-				}
-
-				.sticky-left > .listen {
-					margin-top: 28px;
-					margin-bottom: 22px;
-				}
-
-				.sticky-left > a:last-child {
-					margin-top: 8px;
-				}
-
 				.toolbar-top {
 					background-color: white;
 				}
@@ -179,7 +159,7 @@ class MyApp extends connect(store)(LitElement) {
 					color: var(--app-tertiary-color);
 					text-align: center;
 					text-transform: uppercase;
-					font-size: 10px;
+					font-size: 9px;
 				}
 
 				footer > p {
@@ -234,7 +214,7 @@ class MyApp extends connect(store)(LitElement) {
 				}
 
 				/* Wide layout: when the viewport width is bigger than 460px, layout changes to a wide layout. */
-				@media (min-width: 460px) {
+				@media (min-width: 1200px) {
 					app-header {
 						display: none;
 					}
@@ -251,11 +231,11 @@ class MyApp extends connect(store)(LitElement) {
 					}
 
 					header > * {
-						background-color: white;
 						padding-top: 24px;
 					}
 
 					.toolbar-list {
+						background-color: white;
 						display: block;
 						text-align: right;
 						width: 100%;
@@ -273,6 +253,12 @@ class MyApp extends connect(store)(LitElement) {
 					/* The drawer button isn't shown in the wide layout, so we don't need to offset the title */
 					[main-title] {
 						padding-right: 0px;
+					}
+				}
+
+				@media (min-width: 1200px) and (max-width: 1660px) {
+					.toolbar-list > a {
+						font-size: 14px;
 					}
 				}
 			</style>
@@ -384,7 +370,7 @@ class MyApp extends connect(store)(LitElement) {
 	firstUpdated() {
 		installRouter(location => store.dispatch(navigate(decodeURIComponent(location.pathname))));
 		installOfflineWatcher(offline => store.dispatch(updateOffline(offline)));
-		installMediaQueryWatcher(`(min-width: 460px)`, () => store.dispatch(updateDrawerState(false)));
+		installMediaQueryWatcher(`(min-width: 1200px)`, () => store.dispatch(updateDrawerState(false)));
 	}
 
 	updated(changedProps) {
