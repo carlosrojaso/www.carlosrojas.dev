@@ -140,7 +140,7 @@ export const HeaderAndFooterStyles = html`
 
 		@media (min-width: 1200px) and (max-width: 1660px) {
 			.toolbar-list a {
-				font-size: 12px;
+				font-size: 10px;
 			}
 		}
 

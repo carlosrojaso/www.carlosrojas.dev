@@ -70,7 +70,7 @@ class MyApp extends connect(store)(LitElement) {
 			<app-header condenses reveals effects="waterfall">
 				<app-toolbar class="toolbar-top">
 					<button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
-					<div main-title><a href="/">${mikePosner}</a></div>
+					<div main-title><a href="/" aria-label="Mike Posner">${mikePosner}</a></div>
 				</app-toolbar>
 			</app-header>
 
@@ -91,7 +91,7 @@ class MyApp extends connect(store)(LitElement) {
 
 			<!-- Play Album Sticky Leftside -->
 			<div class="sticky-left">
-				<a href="/"><img class="logo" width="210px" src="images/mike-posner.svg" alt="Mike Posner"/></a>
+				<a href="/" aria-label="Mike Posner"><img class="logo" width="210px" src="images/mike-posner.svg" alt="Mike Posner"/></a>
 				<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
 				<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
 				<a class="listen-button" href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93" target="_blank" rel="noreferrer">
@@ -158,12 +158,12 @@ class MyApp extends connect(store)(LitElement) {
 					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Hate Mail</a>
 				</nav>
 				<div class="social-links">
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/youtube">${youtube}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/twitter">${twitter}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/instagram">${instagram}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/facebook">${facebook}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/tumblr">${tumblr}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/posnerspotify">${spotify}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/youtube" aria-label="youtube">${youtube}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/twitter" aria-label="twitter">${twitter}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/instagram" aria-label="instagram">${instagram}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/facebook" aria-label="facebook">${facebook}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/tumblr" aria-label="tumblr">${tumblr}</a></div>
+					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/posnerspotify" aria-label="spotify">${spotify}</a></div>
 				</div>
 			</footer>
 
