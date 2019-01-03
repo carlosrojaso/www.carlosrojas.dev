@@ -15,6 +15,28 @@ export const SharedStyles = html`
 		:host {
 			display: block;
 			box-sizing: border-box;
+
+			/* Variables */
+			--app-primary-color: #ff6b00;
+			--app-secondary-color: #f1d09f;
+			--app-tertiary-color: #673918;
+			--app-dark-text-color: var(--app-tertiary-color);
+			--app-light-text-color: var(--app-secondary-color);
+			--app-section-odd-color: white;
+			--app-section-even-color: var(--app-secondary-color);
+
+			/* Header Variables */
+			--app-header-background-color: var(--app-primary-color);
+			--app-header-text-color: var(--app-primary-color);
+			--app-header-selected-color: var(--app-tertiary-color);
+			--app-header-hover-color: var(--app-secondary-color);
+
+			/* Drawer Variables */
+			--app-drawer-width: 256px;
+			--app-drawer-background-color: var(--app-primary-color);
+			--app-drawer-text-color: var(--app-secondary-color);
+			--app-drawer-selected-color: var(--app-tertiary-color);
+			--app-drawer-hover-color: var(--app-selected-color);
 		}
 
 		section {
@@ -22,7 +44,7 @@ export const SharedStyles = html`
 			background: var(--app-section-odd-color);
 		}
 
-		section > * {
+		section * {
 			max-width: 648px;
 			margin-right: auto;
 			margin-left: auto;
@@ -32,6 +54,7 @@ export const SharedStyles = html`
 			background: var(--app-section-even-color);
 		}
 
+		/* Typeography */
 		h2 {
 			font-size: 24px;
 			text-align: center;
@@ -53,23 +76,44 @@ export const SharedStyles = html`
 			}
 		}
 
-		.circle {
-			display: block;
-			width: 64px;
-			height: 64px;
-			margin: 0 auto;
-			text-align: center;
-			border-radius: 50%;
-			background: var(--app-primary-color);
-			color: var(--app-light-text-color);
-			font-size: 30px;
-			line-height: 64px;
-		}
-
+		/* Utility Classes */
 		.text-left {
 			text-align: left !important;
 		}
 
+		.text-center {
+			text-align: center !important;
+		}
+
+		.min-height-fix {
+			min-height: calc(100vh - 303px);
+		}
+
+		@media (min-width: 1200px) {
+			.min-height-fix {
+				min-height: calc(100vh - 346px);
+				padding-left: 378px;
+				padding-right: 68px;
+			}
+
+			.min-height-fix * {
+				margin: 0;
+			}
+		}
+
+		@media (min-width: 1660px) {
+			.min-height-fix {
+				padding: 23px;
+			}
+
+			.min-height-fix * {
+				margin: 0 auto;
+			}
+		}
+
+		/* ***************************
+                LISTEN BUTTONS
+        **************************** */
 		.listen-button {
 			position: relative;
 			display: flex;
@@ -84,11 +128,6 @@ export const SharedStyles = html`
 			padding: 0 12px;
 			outline: none;
 			transition: background-color 200ms ease;
-		}
-
-		.listen-button > * {
-			position: relative;
-			z-index: 1;
 		}
 
 		.listen-button:after {
@@ -115,68 +154,17 @@ export const SharedStyles = html`
 			transition: width 200ms ease;
 		}
 
-		.listen-button > img {
+		.listen-button * {
+			position: relative;
+			z-index: 1;
+		}
+
+		.listen-button img {
 			vertical-align: middle;
 		}
 
-		.listen-button > img:last-child {
+		.listen-button img:last-child {
 			margin-left: 12px;
-		}
-
-		.sticky-left {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-		}
-
-		.sticky-left.mobile-only {
-			display: flex;
-		}
-
-		@media (min-width: 600px) {
-			.sticky-left.mobile-only {
-				display: none;
-			}
-		}
-
-		.sticky-left > .logo {
-			margin-bottom: 36px;
-		}
-
-		.sticky-left > .listen {
-			margin-top: 28px;
-			margin-bottom: 22px;
-		}
-
-		.sticky-left > a:last-child {
-			margin-top: 8px;
-		}
-
-		.min-height-fix {
-			min-height: calc(100vh - 303px);
-		}
-
-		@media (min-width: 1200px) {
-			.min-height-fix {
-				min-height: calc(100vh - 346px);
-				padding-left: 378px;
-				padding-right: 68px;
-			}
-
-			.min-height-fix > * {
-				margin: 0;
-			}
-		}
-
-		@media (min-width: 1660px) {
-			.min-height-fix {
-				padding: 24px;
-			}
-
-			.min-height-fix > * {
-				margin: 0 auto;
-			}
 		}
 	</style>
 `;

@@ -14,21 +14,21 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-class Mission extends PageViewElement {
+class About extends PageViewElement {
 	render() {
 		updateMetadata({
-			title: `Mike Posner - Mission`,
-			description: 'My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible. ',
+			title: `Mike Posner - About Me`,
+			description: 'i was born in detroit on a very, very, very, very, very, very, very cold day.',
 		});
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
-				<h2 class="text-left">My Mission</h2>
-				<p>My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
+			<section id="404" class="min-height-fix">
+				<h2 class="text-left">About Me</h2>
+				<p>i was born in detroit on a very, very, very, very, very, very, very cold day.</p>
 			</section>
 		`;
 	}
 }
 
-window.customElements.define('my-mission', Mission);
+window.customElements.define('my-about', About);

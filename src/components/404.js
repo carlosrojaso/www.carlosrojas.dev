@@ -14,7 +14,7 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
-class Accomplishments extends PageViewElement {
+class MyView404 extends PageViewElement {
 	render() {
 		updateMetadata({
 			title: `Mike Posner - Random and Subtly Pretentious List of Accomplishments`,
@@ -23,23 +23,12 @@ class Accomplishments extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
-				<h2 class="text-left">Random and Subtly Pretentious List of Accomplishments</h2>
-				<ol>
-					<li>Graduated from Duke University</li>
-					<li>Made a bunch of songs</li>
-					<li>Got a record deal</li>
-					<li>Made a few super duper popular songs (cooler than me, I took a pill in ibiza)</li>
-					<li>Dyed my hair green for a while</li>
-					<li>Got nominated for a Grammy…for song of the year!!!! (I didn’t win the previously mentioned grammy…Adele did)</li>
-					<li>Wrote a song for Justin Bieber</li>
-					<li>Learn guitar and piano and singing as an adult, actually after I started to have hits!</li>
-					<li>Had a spiritual experience meeting Ram Dass</li>
-					<li>Met Jay-Z…TWICE! WOW - I must be a big deal!</li>
-				</ol>
+			<section id="404" class="min-height-fix">
+				<h2 class="text-left">Oops! You hit a 404</h2>
+				<p>The page you're looking for doesn't seem to exist. Head back <a href="/">home</a> and try again?</p>
 			</section>
 		`;
 	}
 }
 
-window.customElements.define('my-accomplishments', Accomplishments);
+window.customElements.define('my-404', MyView404);

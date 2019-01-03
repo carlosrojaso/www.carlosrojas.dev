@@ -8,51 +8,45 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import {
-  CLOSE_SNACKBAR,
-  OPEN_SNACKBAR,
-  UPDATE_DRAWER_STATE,
-  UPDATE_OFFLINE,
-  UPDATE_PAGE
-} from "../actions/app.js";
+import { CLOSE_SNACKBAR, OPEN_SNACKBAR, UPDATE_DRAWER_STATE, UPDATE_OFFLINE, UPDATE_PAGE } from '../actions/app.js';
 
 const INITIAL_STATE = {
-  page: "",
-  offline: false,
-  drawerOpened: false,
-  snackbarOpened: false
+	page: '',
+	offline: false,
+	drawerOpened: false,
+	snackbarOpened: false,
 };
 
 const app = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case UPDATE_PAGE:
-      return {
-        ...state,
-        page: action.page
-      };
-    case UPDATE_OFFLINE:
-      return {
-        ...state,
-        offline: action.offline
-      };
-    case UPDATE_DRAWER_STATE:
-      return {
-        ...state,
-        drawerOpened: action.opened
-      };
-    case OPEN_SNACKBAR:
-      return {
-        ...state,
-        snackbarOpened: true
-      };
-    case CLOSE_SNACKBAR:
-      return {
-        ...state,
-        snackbarOpened: false
-      };
-    default:
-      return state;
-  }
+	switch (action.type) {
+		case UPDATE_PAGE:
+			return {
+				...state,
+				page: action.page,
+			};
+		case UPDATE_OFFLINE:
+			return {
+				...state,
+				offline: action.offline,
+			};
+		case UPDATE_DRAWER_STATE:
+			return {
+				...state,
+				drawerOpened: action.opened,
+			};
+		case OPEN_SNACKBAR:
+			return {
+				...state,
+				snackbarOpened: true,
+			};
+		case CLOSE_SNACKBAR:
+			return {
+				...state,
+				snackbarOpened: false,
+			};
+		default:
+			return state;
+	}
 };
 
 export default app;

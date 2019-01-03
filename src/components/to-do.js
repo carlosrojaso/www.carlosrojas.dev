@@ -9,35 +9,109 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html } from '@polymer/lit-element';
+import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
 class ToDo extends PageViewElement {
 	render() {
+		updateMetadata({
+			title: `Mike Posner - Things I Want To Do Before I Die`,
+			description: 'Things I Want To Do Before I Die',
+		});
+
 		return html`
 			${SharedStyles}
 			<section class="min-height-fix">
-				<h2>Things I Still Want To Do Before I Die:</h2>
-				<ol>
-					<li>GO TO OUTER SPACE- number one bucket list thing for me.</li>
-					<li>Get my MSW and work as a hospice chaplain (I think working around death will help me lead a better life.)</li>
-					<li>Study music theory at Berklee or somewhere good</li>
-					<li>Take ear training at Berklee</li>
-					<li>Intern for Richard Ryan</li>
-					<li>Win a Grammy</li>
-					<li>Walk across America - I’M DOING THAT THIS YEAR!</li>
-					<li>Mentor/produce a younger artist</li>
-					<li>read Infinite Jest - I’m DOING THAT NOW!</li>
-					<li>Spend a week in solitude - I DID THIS! TWICE!</li>
-					<li>Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!</li>
-					<li>Do the Landmark Forum - I DID THIS IT WAS AWESOME!</li>
-					<li>Drink Ayahuasca - I DID THIS!</li>
-					<li>Get married? have a kid?</li>
-					<li>Study film and create some bad ass film pieces</li>
-					<li>Climb mount everest</li>
-					<li>Take my mom to Namibia</li>
-				</ol>
+				<h2 class="text-left">Things I Still Want To Do Before I Die:</h2>
+				<div class="to-do-items">
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						GO TO OUTER SPACE- number one bucket list thing for me.
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Get my MSW and work as a hospice chaplain (I think working around death will help me lead a better life.)
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Study music theory at Berklee or somewhere good
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Take ear training at Berklee
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Intern for Richard Ryan
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Win a Grammy
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Walk across America - I’M DOING THAT THIS YEAR!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Mentor/produce a younger artist
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Read Infinite Jest - I’m DOING THAT NOW!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" checked="true" />
+						Spend a week in solitude - I DID THIS! TWICE!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" checked="true" />
+						Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" checked="true" />
+						Do the Landmark Forum - I DID THIS IT WAS AWESOME!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" checked="true" />
+						Drink Ayahuasca - I DID THIS!
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Get married? have a kid?
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Study film and create some bad ass film pieces
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Climb mount everest
+					</div>
+					<div class="to-do-item">
+						<!-- display: block     -->
+						<input type="checkbox" />
+						Take my mom to Namibia
+					</div>
+				</div>
 			</section>
 		`;
 	}

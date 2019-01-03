@@ -9,12 +9,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html } from '@polymer/lit-element';
+import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
 class Tour extends PageViewElement {
 	render() {
+		updateMetadata({
+			title: `Mike Posner - Tour`,
+			description:
+				'I am spending this year walking across America :).  That’s right, I’m walking…like with my feet…all the way across. It will take me about a year. While I walk, I will be playing free surprise concerts for people. Follow me on instagram to keep up. @mikeposner',
+		});
+
 		return html`
 			${SharedStyles}
 			<section class="min-height-fix">

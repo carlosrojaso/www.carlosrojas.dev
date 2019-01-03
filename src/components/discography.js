@@ -9,16 +9,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html } from '@polymer/lit-element';
+import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
 class Discography extends PageViewElement {
 	render() {
+		updateMetadata({
+			title: `Mike Posner - Random and Subtly Pretentious List of Accomplishments`,
+			description: 'Random and Subtly Pretentious List of Accomplishments',
+		});
+
 		return html`
 			${SharedStyles}
 			<section class="min-height-fix">
-				<h2 class="text-left">Discography - These are all the albums/projects I’ve evermade.</h2>
+				<h2 class="text-left">Discography - These are all the albums/projects I’ve ever made.</h2>
 				<ol>
 					<li>
 						2006 - Reflections of a Lost Teen - This was the album I produced in high school. I sold it out of the trunk of my car. This was

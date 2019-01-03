@@ -8,89 +8,101 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-export const UPDATE_PAGE = "UPDATE_PAGE";
-export const UPDATE_OFFLINE = "UPDATE_OFFLINE";
-export const UPDATE_DRAWER_STATE = "UPDATE_DRAWER_STATE";
-export const OPEN_SNACKBAR = "OPEN_SNACKBAR";
-export const CLOSE_SNACKBAR = "CLOSE_SNACKBAR";
+export const UPDATE_PAGE = 'UPDATE_PAGE';
+export const UPDATE_OFFLINE = 'UPDATE_OFFLINE';
+export const UPDATE_DRAWER_STATE = 'UPDATE_DRAWER_STATE';
+export const OPEN_SNACKBAR = 'OPEN_SNACKBAR';
+export const CLOSE_SNACKBAR = 'CLOSE_SNACKBAR';
 
 export const navigate = path => dispatch => {
-  // Extract the page name from path.
-  const page = path === "/" ? "Home" : path.slice(1);
+	// Extract the page name from path.
+	const page = path === '/' ? 'home' : path.slice(1);
 
-  // Any other info you might want to extract from the path (like page type),
-  // you can do here
-  dispatch(loadPage(page));
+	// Any other info you might want to extract from the path (like page type),
+	// you can do here
+	dispatch(loadPage(page));
 
-  // Close the drawer - in case the *path* change came from a link in the drawer.
-  dispatch(updateDrawerState(false));
+	// Close the drawer - in case the *path* change came from a link in the drawer.
+	dispatch(updateDrawerState(false));
 };
 
 const loadPage = page => dispatch => {
-  switch (page) {
-    case "Home":
-      import("../components/home.js").then(module => {
-        // Put code in here that you want to run every time when
-        // navigating to view1 after home.js is loaded.
-      });
-      break;
-    case "Discography":
-      import("../components/discography.js");
-      break;
-    case "Tour":
-      import("../components/tour.js");
-      break;
-    case "Mission":
-      import("../components/mission.js");
-      break;
-    case "Accomplishments":
-      import("../components/accomplishments.js");
-      break;
-    case "To-Do":
-      import("../components/to-do.js");
-      break;
-    default:
-      page = "view404";
-      import("../components/my-view404.js");
-  }
+	switch (page) {
+		case 'home':
+			import('../components/home.js').then(module => {
+				// Put code in here that you want to run every time when
+				// navigating to view1 after home.js is loaded.
+			});
+			break;
+		case 'discography':
+			import('../components/discography.js');
+			break;
+		case 'tour':
+			import('../components/tour.js');
+			break;
+		case 'mission':
+			import('../components/mission.js');
+			break;
+		case 'accomplishments':
+			import('../components/accomplishments.js');
+			break;
+		case 'to-do':
+			import('../components/to-do.js');
+			break;
+		case 'join':
+			import('../components/join.js');
+			break;
+		case 'favorite-albums':
+			import('../components/favorite-albums.js');
+			break;
+		case 'reading-list':
+			import('../components/reading-list.js');
+			break;
+		case 'about-me':
+			import('../components/about.js');
+			break;
+		case 'listen':
+			import('../components/listen.js');
+			break;
+		default:
+			page = '404';
+			import('../components/404.js');
+	}
 
-  dispatch(updatePage(page));
+	dispatch(updatePage(page));
 };
 
 const updatePage = page => {
-  return {
-    type: UPDATE_PAGE,
-    page
-  };
+	return {
+		type: UPDATE_PAGE,
+		page,
+	};
 };
 
 let snackbarTimer;
 
 export const showSnackbar = () => dispatch => {
-  dispatch({
-    type: OPEN_SNACKBAR
-  });
-  window.clearTimeout(snackbarTimer);
-  snackbarTimer = window.setTimeout(
-    () => dispatch({ type: CLOSE_SNACKBAR }),
-    3000
-  );
+	dispatch({
+		type: OPEN_SNACKBAR,
+	});
+	window.clearTimeout(snackbarTimer);
+	snackbarTimer = window.setTimeout(() => dispatch({ type: CLOSE_SNACKBAR }), 3000);
 };
 
 export const updateOffline = offline => (dispatch, getState) => {
-  // Show the snackbar only if offline status changes.
-  if (offline !== getState().app.offline) {
-    dispatch(showSnackbar());
-  }
-  dispatch({
-    type: UPDATE_OFFLINE,
-    offline
-  });
+	// Show the snackbar only if offline status changes.
+	if (offline !== getState().app.offline) {
+		dispatch(showSnackbar());
+	}
+	dispatch({
+		type: UPDATE_OFFLINE,
+		offline,
+	});
 };
 
 export const updateDrawerState = opened => {
-  return {
-    type: UPDATE_DRAWER_STATE,
-    opened
-  };
+	return {
+		type: UPDATE_DRAWER_STATE,
+		opened,
+	};
 };
