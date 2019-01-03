@@ -8,24 +8,32 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html } from "@polymer/lit-element";
-import { PageViewElement } from "./page-view-element.js";
+import { html } from '@polymer/lit-element';
+import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
-import { SharedStyles } from "./shared-styles.js";
+import { SharedStyles } from './shared-styles.js';
 
 class Mission extends PageViewElement {
-  render() {
-    return html`
-      ${SharedStyles}
-      <section>
-        <h2 class="text-left">My Mission</h2>
-        <p>
-          My mission is enjoy my life and help others enjoy theirs. Also, be as
-          kind to other people as possible.
-        </p>
-      </section>
-    `;
-  }
+	render() {
+		return html`
+			${SharedStyles}
+			<style>
+				section {
+					min-height: calc(100vh - 301px);
+				}
+
+				@media (min-width: 460px) {
+					section {
+						min-height: calc(100vh - 327px);
+					}
+				}
+			</style>
+			<section>
+				<h2 class="text-left">My Mission</h2>
+				<p>My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
+			</section>
+		`;
+	}
 }
 
-window.customElements.define("my-mission", Mission);
+window.customElements.define('my-mission', Mission);
