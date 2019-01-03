@@ -57,7 +57,7 @@ class MyApp extends connect(store)(LitElement) {
 
 				@media (min-width: 1200px) {
 					.main-content {
-						padding-top: 102px;
+						padding-top: 156px;
 					}
 
 					app-header {

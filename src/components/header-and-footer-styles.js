@@ -138,9 +138,21 @@ export const HeaderAndFooterStyles = html`
 			}
 		}
 
-		@media (min-width: 1200px) and (max-width: 1660px) {
+		@media (min-width: 1200px) and (max-width: 1217px) {
+			.toolbar-list a {
+				font-size: 9px;
+			}
+		}
+
+		@media (min-width: 1200px) and (max-width: 1436px) {
 			.toolbar-list a {
 				font-size: 10px;
+			}
+		}
+
+		@media (min-width: 1437px) and (max-width: 1769px) {
+			.toolbar-list a {
+				font-size: 14px;
 			}
 		}
 
