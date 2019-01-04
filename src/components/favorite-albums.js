@@ -9,7 +9,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { html } from '@polymer/lit-element';
+import { repeat } from 'lit-html/directives/repeat.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
+import { albums } from './favorite-albums-list.js';
 import { PageViewElement } from './page-view-element.js';
 import { SharedStyles } from './shared-styles.js';
 
@@ -22,15 +24,130 @@ class FavoriteAlbums extends PageViewElement {
 		});
 
 		return html`
-			${SharedStyles} <style></style>
+			${SharedStyles}
+			<style>
+				.albums {
+					width: 100%;
+					margin-top: 36px;
+				}
+
+				.album {
+					width: 100%;
+					margin: 36px 0;
+					display: flex;
+					align-items: flex-start;
+					flex-direction: row;
+				}
+
+				.album a {
+					margin: 0;
+				}
+
+				.album .cover {
+					width: 110px;
+					margin-right: 16px;
+					margin-left: 0;
+					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
+				}
+
+				.album .cover:hover {
+					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+				}
+
+				.album .cover.alternate {
+					height: 110px;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+				}
+
+				.album .cover.alternate:after {
+					content: 'we never made a cover';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					background-color: white;
+					color: var(--app-primary-color);
+				}
+
+				.album .copy {
+					width: 100%;
+					padding: 4px;
+					font-size: 14px;
+					margin: 0;
+				}
+
+				.album .title,
+				.album .year {
+					color: var(--app-secondary-color);
+					font-weight: bold;
+				}
+
+				.album .title {
+					margin: 8px 0;
+					font-size: 18px;
+				}
+
+				.album .text {
+					font-size: 11px;
+				}
+
+				@media (min-width: 660px) {
+					.album {
+						margin: 64px 0;
+					}
+
+					.album .cover {
+						width: 220px;
+					}
+
+					.album .cover.alternate {
+						height: 220px;
+					}
+
+					.album .year {
+						font-size: 22px;
+					}
+
+					.album .title {
+						font-size: 28px;
+					}
+
+					.album .text {
+						font-size: 16px;
+					}
+				}
+			</style>
 			<section id="favorite-albums" class="min-height-fix">
 				<h2 class="text-left">My Favorite Albums of All Time</h2>
-				<ul>
-					<li>Aquemini by Outkast</li>
-					<li>Songs in the Key of Life by Stevie Wonder</li>
-					<li>Continuum by John Mayer</li>
-					<li>I’m Wide Awake, It’s Morning by Bright Eyes</li>
-				</ul>
+				<div class="albums">
+					${
+						repeat(
+							albums,
+							album => html`
+								<div class="album">
+									<!-- display: block -->
+									<a href="${album.url}" target="_blank" rel="noreferrer" aria-label="${album.title}">
+										<img class="cover ${album.cover ? '' : 'alternate'}" width="100%" src="${album.cover}" alt="${album.title}" />
+									</a>
+									<div class="copy">
+										<div class="year">${album.year}</div>
+										<div class="title">${album.title}</div>
+										<div class="text">${album.copy}</div>
+									</div>
+								</div>
+							`
+						)
+					}
+				</div>
 			</section>
 		`;
 	}

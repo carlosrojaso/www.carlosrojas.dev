@@ -28,34 +28,34 @@ class Discography extends PageViewElement {
 			<style>
 				.albums {
 					width: 100%;
-					display: flex;
-					align-items: flex-start;
-					flex-wrap: wrap;
-					justify-content: space-evenly;
 					margin-top: 36px;
 				}
 
 				.album {
-					width: 200px;
-					margin: 0 8px 24px;
-					text-decoration: none;
+					width: 100%;
+					margin: 36px 0;
+					display: flex;
+					align-items: flex-start;
+					flex-direction: row;
 				}
 
-				.album:first-child {
-					margin-left: 0;
-				}
-
-				.album:last-child {
-					margin-right: 0;
+				.album a {
+					margin: 0;
 				}
 
 				.album .cover {
+					width: 110px;
+					margin-right: 16px;
+					margin-left: 0;
 					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
 				}
 
+				.album .cover:hover {
+					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+				}
+
 				.album .cover.alternate {
-					width: 100%;
-					height: 200px;
+					height: 110px;
 					position: relative;
 					display: flex;
 					align-items: center;
@@ -79,9 +79,10 @@ class Discography extends PageViewElement {
 				}
 
 				.album .copy {
-					text-align: center;
+					width: 100%;
 					padding: 4px;
 					font-size: 14px;
+					margin: 0;
 				}
 
 				.album .title,
@@ -92,10 +93,37 @@ class Discography extends PageViewElement {
 
 				.album .title {
 					margin: 8px 0;
+					font-size: 18px;
 				}
 
 				.album .text {
 					font-size: 11px;
+				}
+
+				@media (min-width: 660px) {
+					.album {
+						margin: 64px 0;
+					}
+
+					.album .cover {
+						width: 220px;
+					}
+
+					.album .cover.alternate {
+						height: 220px;
+					}
+
+					.album .year {
+						font-size: 22px;
+					}
+
+					.album .title {
+						font-size: 28px;
+					}
+
+					.album .text {
+						font-size: 16px;
+					}
 				}
 			</style>
 			<section class="min-height-fix">

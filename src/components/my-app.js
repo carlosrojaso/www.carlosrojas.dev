@@ -52,7 +52,7 @@ class MyApp extends connect(store)(LitElement) {
 				}
 
 				app-drawer {
-					z-index: 2000;
+					z-index: 4000;
 				}
 
 				@media (min-width: 1200px) {
