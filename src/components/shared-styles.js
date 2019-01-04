@@ -89,6 +89,14 @@ export const SharedStyles = html`
 			min-height: calc(100vh - 303px);
 		}
 
+		section.min-height-fix {
+			background-color: var(--app-primary-color);
+		}
+
+		section.min-height-fix * {
+			color: white;
+		}
+
 		@media (min-width: 1200px) {
 			.min-height-fix {
 				min-height: calc(100vh - 346px);

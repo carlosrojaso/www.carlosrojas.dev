@@ -24,10 +24,6 @@ class ToDo extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
-				#things-to-do-before-i-die {
-					background: var(--app-primary-color);
-				}
-
 				input[type='checkbox'] {
 					width: 30px;
 					min-width: 30px;
@@ -41,6 +37,7 @@ class ToDo extends PageViewElement {
 					appearance: none;
 					margin: 0;
 					flex-basis: 30px;
+					outline: none;
 				}
 
 				input[type='checkbox']:checked {
@@ -62,6 +59,7 @@ class ToDo extends PageViewElement {
 					margin: 0;
 					margin-right: 12px;
 					text-align: left;
+					color: white;
 				}
 			</style>
 			<section id="things-to-do-before-i-die" class="min-height-fix">

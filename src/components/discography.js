@@ -14,6 +14,15 @@ import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
 
+const albums = [
+	{
+		cover: 'https://via.placeholder.com/640x640',
+		url: '/discography',
+		text:
+			'2006 - Reflections of a Lost Teen - This was the album I produced in high school. I sold it out of the trunk of my car. This was before I sang. I only rapped. No one has ever really heard it except my schoolmates.',
+	},
+];
+
 class Discography extends PageViewElement {
 	render() {
 		updateMetadata({
@@ -26,10 +35,7 @@ class Discography extends PageViewElement {
 			<section class="min-height-fix">
 				<h2 class="text-left">Discography - These are all the albums/projects I’ve ever made.</h2>
 				<ol>
-					<li>
-						2006 - Reflections of a Lost Teen - This was the album I produced in high school. I sold it out of the trunk of my car. This was
-						before I sang. I only rapped. No one has ever really heard it except my schoolmates.
-					</li>
+					<li></li>
 					<li>2009 - A Matter of Time - This was the mixtape I made in my dorm room that sort of started my professional career.</li>
 					<li>2009 - One Foot Out the Door - This was my second mixtape.</li>
 					<li>2010 - 31 Minutes to Takeoff - This was my first studio album.</li>

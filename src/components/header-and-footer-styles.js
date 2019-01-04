@@ -119,6 +119,7 @@ export const HeaderAndFooterStyles = html`
 				left: 0;
 				padding-top: 24px;
 				padding: 24px 68px;
+				background-color: white;
 			}
 
 			.toolbar-list {
@@ -126,7 +127,6 @@ export const HeaderAndFooterStyles = html`
 				width: 100%;
 				padding-left: 378px;
 				box-sizing: border-box;
-				background-color: white;
 				text-align: right;
 			}
 

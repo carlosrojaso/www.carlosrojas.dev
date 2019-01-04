@@ -77,13 +77,21 @@ class MyApp extends connect(store)(LitElement) {
 			<!-- Desktop Navigation Links -->
 			<nav class="toolbar-list">
 				<a ?selected="${this._page === 'mission'}" href="/mission">Mission</a>
-				<a ?selected="${this._page === 'join'}" href="/join">Join The Walk</a>
+				<a ?selected="${this._page === 'join-the-walk'}" href="/join-the-walk">Join The Walk</a>
 				<a ?selected="${this._page === 'tour'}" href="/tour">Tour</a>
 				<a ?selected="${this._page === 'discography'}" href="/discography">Discography</a>
-				<a ?selected="${this._page === 'favorite-albums'}" href="/favorite-albums">My Favorite Albums of All Time</a>
+				<a ?selected="${this._page === 'my-favorite-albums-of-all-time'}" href="/my-favorite-albums-of-all-time"
+					>My Favorite Albums of All Time</a
+				>
 				<a ?selected="${this._page === 'reading-list'}" href="/reading-list">Reading List</a>
-				<a ?selected="${this._page === 'accomplishments'}" href="/accomplishments">Random and Subtly Pretentious List of Accomplishments</a>
-				<a ?selected="${this._page === 'to-do'}" href="/to-do">Things I Want To Do Before I Die</a>
+				<a
+					?selected="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
+					href="/random-and-subtly-pretentious-list-of-accomplishments"
+					>Random and Subtly Pretentious List of Accomplishments</a
+				>
+				<a ?selected="${this._page === 'things-i-want-to-do-before-i-die'}" href="/things-i-want-to-do-before-i-die"
+					>Things I Want To Do Before I Die</a
+				>
 				<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
 				<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
 				<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
@@ -113,15 +121,21 @@ class MyApp extends connect(store)(LitElement) {
 			<app-drawer .opened="${this._drawerOpened}" @opened-changed="${this._drawerOpenedChanged}">
 				<nav class="drawer-list">
 					<a ?selected="${this._page === 'mission'}" href="/mission">Mission</a>
-					<a ?selected="${this._page === 'join'}" href="/join">Join The Walk</a>
+					<a ?selected="${this._page === 'join-the-walk'}" href="/join-the-walk">Join The Walk</a>
 					<a ?selected="${this._page === 'tour'}" href="/tour">Tour</a>
 					<a ?selected="${this._page === 'discography'}" href="/discography">Discography</a>
-					<a ?selected="${this._page === 'favorite-albums'}" href="/favorite-albums">My Favorite Albums of All Time</a>
+					<a ?selected="${this._page === 'my-favorite-albums-of-all-time'}" href="/my-favorite-albums-of-all-time"
+						>My Favorite Albums of All Time</a
+					>
 					<a ?selected="${this._page === 'reading-list'}" href="/reading-list">Reading List</a>
-					<a ?selected="${this._page === 'accomplishments'}" href="/accomplishments"
+					<a
+						?selected="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
+						href="/random-and-subtly-pretentious-list-of-accomplishments"
 						>Random and Subtly Pretentious List of Accomplishments</a
 					>
-					<a ?selected="${this._page === 'to-do'}" href="/to-do">Things I Want To Do Before I Die</a>
+					<a ?selected="${this._page === 'things-i-want-to-do-before-i-die'}" href="/things-i-want-to-do-before-i-die"
+						>Things I Want To Do Before I Die</a
+					>
 					<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
 					<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
 					<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
@@ -131,16 +145,19 @@ class MyApp extends connect(store)(LitElement) {
 			<!-- Main content -->
 			<main role="main" class="main-content">
 				<my-home class="page" ?active="${this._page === 'home'}"></my-home>
-				<my-join class="page" ?active="${this._page === 'join'}"></my-join>
+				<my-mission class="page" ?active="${this._page === 'mission'}"></my-mission>
+				<my-join class="page" ?active="${this._page === 'join-the-walk'}"></my-join>
 				<my-tour class="page" ?active="${this._page === 'tour'}"></my-tour>
 				<my-discography class="page" ?active="${this._page === 'discography'}"></my-discography>
-				<my-favorite-albums class="page" ?active="${this._page === 'favorite-albums'}"></my-favorite-albums>
+				<my-favorite-albums class="page" ?active="${this._page === 'my-favorite-albums-of-all-time'}"></my-favorite-albums>
 				<my-reading-list class="page" ?active="${this._page === 'reading-list'}"></my-reading-list>
-				<my-mission class="page" ?active="${this._page === 'mission'}"></my-mission>
-				<my-accomplishments class="page" ?active="${this._page === 'accomplishments'}"></my-accomplishments>
-				<my-todo class="page" ?active="${this._page === 'to-do'}"></my-todo>
-				<my-about class="page" ?active="${this._page === 'about-me'}"></my-about>
+				<my-accomplishments
+					class="page"
+					?active="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
+				></my-accomplishments>
+				<my-todo class="page" ?active="${this._page === 'things-i-want-to-do-before-i-die'}"></my-todo>
 				<my-listen class="page" ?active="${this._page === 'listen'}"></my-listen>
+				<my-about class="page" ?active="${this._page === 'about-me'}"></my-about>
 				<my-404 class="page" ?active="${this._page === '404'}"></my-404>
 			</main>
 

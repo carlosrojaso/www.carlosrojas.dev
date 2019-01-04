@@ -29,31 +29,31 @@ class Home extends PageViewElement {
 				}
 
 				p.text-center {
-					margin-top: 4rem;
+					margin-bottom: 4rem;
 				}
 
 				@media (max-width: 1600px) {
-					#walk-across-america {
+					#home {
 						margin-top: 30px;
 					}
 
-					#walk-across-america > .container {
+					#home > .container {
 						text-align: center;
 					}
 
-					#walk-across-america > .container > img,
-					#walk-across-america > .container > svg {
+					#home > .container > img,
+					#home > .container > svg {
 						width: 80%;
 					}
 				}
 			</style>
-			<section id="walk-across-america" class="min-height-fix">
+			<section id="home">
 				<div class="container"><img width="100%" src="images/posner-walk.svg" alt="Logo" /></div>
+				<div class="container state-map"><img width="100%" src="images/state-map.svg" alt="Logo" /></div>
 				<p class="text-center">
 					Starting March 1, 2019, I will be walking from the Atlantic Ocean to the Pacific Ocean. The journey will take me most of my 31st
 					year. You are welcome to join at any time 😊🦁✨🌼🌳🤴.
 				</p>
-				<div class="container state-map"><img width="100%" src="images/state-map.svg" alt="Logo" /></div>
 			</section>
 		`;
 	}

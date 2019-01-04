@@ -34,35 +34,35 @@ const loadPage = page => dispatch => {
 				// navigating to view1 after home.js is loaded.
 			});
 			break;
-		case 'discography':
-			import('../components/discography.js');
+		case 'mission':
+			import('../components/mission.js');
+			break;
+		case 'join-the-walk':
+			import('../components/join.js');
 			break;
 		case 'tour':
 			import('../components/tour.js');
 			break;
-		case 'mission':
-			import('../components/mission.js');
+		case 'discography':
+			import('../components/discography.js');
 			break;
-		case 'accomplishments':
-			import('../components/accomplishments.js');
-			break;
-		case 'to-do':
-			import('../components/to-do.js');
-			break;
-		case 'join':
-			import('../components/join.js');
-			break;
-		case 'favorite-albums':
+		case 'my-favorite-albums-of-all-time':
 			import('../components/favorite-albums.js');
 			break;
 		case 'reading-list':
 			import('../components/reading-list.js');
 			break;
-		case 'about-me':
-			import('../components/about.js');
+		case 'random-and-subtly-pretentious-list-of-accomplishments':
+			import('../components/accomplishments.js');
+			break;
+		case 'things-i-want-to-do-before-i-die':
+			import('../components/to-do.js');
 			break;
 		case 'listen':
 			import('../components/listen.js');
+			break;
+		case 'about-me':
+			import('../components/about.js');
 			break;
 		default:
 			page = '404';
