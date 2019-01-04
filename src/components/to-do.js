@@ -160,6 +160,7 @@ class ToDo extends PageViewElement {
 						<input type="checkbox" />
 					</div>
 				</div>
+				<img src="images/orange-checkmark.svg" alt="Checkmark" style="opacity: 0;" width="1px" />
 			</section>
 		`;
 	}
