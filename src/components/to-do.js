@@ -48,7 +48,8 @@ class ToDo extends PageViewElement {
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url('/images/orange-checkmark.svg');
+					background: url('esm-bundled/images/orange-checkmark.svg'), url('es6-bundled/images/orange-checkmark.svg'),
+						url('es5-bundled/images/orange-checkmark.svg'), url('images/orange-checkmark.svg');
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 15px;
@@ -160,7 +161,6 @@ class ToDo extends PageViewElement {
 						<input type="checkbox" />
 					</div>
 				</div>
-				<img src="images/orange-checkmark.svg" alt="Checkmark" style="opacity: 0;" width="1px" />
 			</section>
 		`;
 	}
