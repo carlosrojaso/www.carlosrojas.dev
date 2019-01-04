@@ -40,7 +40,7 @@ class ToDo extends PageViewElement {
 					outline: none;
 				}
 
-				input[type='checkbox']:checked {
+				input[type='checkbox'][checked] {
 					background-image: url(/images/orange-checkmark.svg);
 					background-position: center;
 					background-repeat: no-repeat;

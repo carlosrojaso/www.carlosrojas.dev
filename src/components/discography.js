@@ -19,8 +19,8 @@ import { SharedStyles } from './shared-styles.js';
 class Discography extends PageViewElement {
 	render() {
 		updateMetadata({
-			title: `Mike Posner - Random and Subtly Pretentious List of Accomplishments`,
-			description: 'Random and Subtly Pretentious List of Accomplishments',
+			title: `Mike Posner - Discography`,
+			description: 'These are all the albums/projects I’ve ever made.',
 		});
 
 		return html`
