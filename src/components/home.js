@@ -28,6 +28,10 @@ class Home extends PageViewElement {
 					margin-bottom: 4rem;
 				}
 
+				p.text-center {
+					margin-top: 4rem;
+				}
+
 				@media (max-width: 1600px) {
 					#walk-across-america {
 						margin-top: 30px;

@@ -24,7 +24,13 @@ class Join extends PageViewElement {
 		return html`
 			${SharedStyles} <style></style>
 			<section id="join" class="min-height-fix">
-				<h2 class="text-left">Join The Walk - Conditions of Walking</h2>
+				<h2 class="text-left">Join The Walk</h2>
+				<p>
+					The Walk begins March 1, 2019. Follow me on Instagram for additional information. Anyone is welcome to walk with me at any time
+					during my journey. I will be practicing deep listening. What does this mean? i will be spending periods of my walk compassionately
+					listening to people with as much of my full attention as possible. If you need to be heard...I’m there to hear. Conditions of
+					Walking:
+				</p>
 				<ul>
 					<li>You are responsible for being able to physically walk. This is no easy ride.</li>
 					<li>

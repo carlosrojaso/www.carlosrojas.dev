@@ -23,93 +23,136 @@ class ToDo extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
+			<style>
+				#things-to-do-before-i-die {
+					background: var(--app-primary-color);
+				}
+
+				input[type='checkbox'] {
+					width: 30px;
+					min-width: 30px;
+					max-width: 30px;
+					height: 30px;
+					border-radius: 8px;
+					border: 1px solid #d2d2d2;
+					background-color: #fff;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					margin: 0;
+					flex-basis: 30px;
+				}
+
+				input[type='checkbox']:checked {
+					background-image: url(/images/orange-checkmark.svg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 15px;
+				}
+
+				.to-do-item {
+					display: flex;
+					align-items: center;
+					flex-direction: row;
+					justify-content: space-between;
+					margin: 8px 0 12px;
+				}
+
+				.to-do-item .text {
+					margin: 0;
+					margin-right: 12px;
+					text-align: left;
+				}
+			</style>
+			<section id="things-to-do-before-i-die" class="min-height-fix">
 				<h2 class="text-left">Things I Still Want To Do Before I Die:</h2>
 				<div class="to-do-items">
 					<div class="to-do-item">
+						<span class="text">GO TO OUTER SPACE- number one bucket list thing for me.</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						GO TO OUTER SPACE- number one bucket list thing for me.
 					</div>
 					<div class="to-do-item">
+						<span class="text"
+							>Get my MSW and work as a hospice chaplain (I think working around death will help me lead a better life.)</span
+						>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Get my MSW and work as a hospice chaplain (I think working around death will help me lead a better life.)
 					</div>
 					<div class="to-do-item">
+						<span class="text">Study music theory at Berklee or somewhere good</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Study music theory at Berklee or somewhere good
 					</div>
 					<div class="to-do-item">
+						<span class="text">Take ear training at Berklee</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Take ear training at Berklee
 					</div>
 					<div class="to-do-item">
+						<span class="text">Intern for Richard Ryan</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Intern for Richard Ryan
 					</div>
 					<div class="to-do-item">
+						<span class="text">Win a Grammy</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Win a Grammy
 					</div>
 					<div class="to-do-item">
+						<span class="text">Walk across America - I’M DOING THAT THIS YEAR!</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Walk across America - I’M DOING THAT THIS YEAR!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Mentor/produce a younger artist</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Mentor/produce a younger artist
 					</div>
 					<div class="to-do-item">
+						<span class="text">Read Infinite Jest - I’m DOING THAT NOW!</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Read Infinite Jest - I’m DOING THAT NOW!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Spend a week in solitude - I DID THIS! TWICE!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
-						Spend a week in solitude - I DID THIS! TWICE!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
-						Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Do the Landmark Forum - I DID THIS IT WAS AWESOME!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
-						Do the Landmark Forum - I DID THIS IT WAS AWESOME!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Drink Ayahuasca - I DID THIS!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
-						Drink Ayahuasca - I DID THIS!
 					</div>
 					<div class="to-do-item">
+						<span class="text">Get married? have a kid?</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Get married? have a kid?
 					</div>
 					<div class="to-do-item">
+						<span class="text">Study film and create some bad ass film pieces</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Study film and create some bad ass film pieces
 					</div>
 					<div class="to-do-item">
+						<span class="text">Climb mount everest</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Climb mount everest
 					</div>
 					<div class="to-do-item">
+						<span class="text">Take my mom to Namibia</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
-						Take my mom to Namibia
 					</div>
 				</div>
 			</section>

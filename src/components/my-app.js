@@ -84,9 +84,9 @@ class MyApp extends connect(store)(LitElement) {
 				<a ?selected="${this._page === 'reading-list'}" href="/reading-list">Reading List</a>
 				<a ?selected="${this._page === 'accomplishments'}" href="/accomplishments">Random and Subtly Pretentious List of Accomplishments</a>
 				<a ?selected="${this._page === 'to-do'}" href="/to-do">Things I Want To Do Before I Die</a>
-				<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
 				<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
 				<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
+				<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
 			</nav>
 
 			<!-- Play Album Sticky Leftside -->
@@ -122,9 +122,9 @@ class MyApp extends connect(store)(LitElement) {
 						>Random and Subtly Pretentious List of Accomplishments</a
 					>
 					<a ?selected="${this._page === 'to-do'}" href="/to-do">Things I Want To Do Before I Die</a>
-					<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
 					<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
 					<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
+					<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
 				</nav>
 			</app-drawer>
 
