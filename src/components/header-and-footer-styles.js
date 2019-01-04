@@ -128,6 +128,7 @@ export const HeaderAndFooterStyles = html`
 				padding-left: 378px;
 				box-sizing: border-box;
 				text-align: right;
+				z-index: 1000;
 			}
 
 			.sticky-left {
@@ -135,6 +136,7 @@ export const HeaderAndFooterStyles = html`
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
+				z-index: 2000;
 			}
 		}
 
@@ -166,6 +168,9 @@ export const HeaderAndFooterStyles = html`
 			text-align: center;
 			text-transform: uppercase;
 			font-size: 9px;
+			border-top: 2px solid var(--app-secondary-color);
+			z-index: 3000;
+			position: relative;
 		}
 
 		footer .copyright {
