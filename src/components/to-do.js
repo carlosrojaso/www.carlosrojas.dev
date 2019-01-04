@@ -40,7 +40,8 @@ class ToDo extends PageViewElement {
 					outline: none;
 				}
 
-				input[type='checkbox'][checked] {
+				input[type='checkbox'][checked],
+				input[type='checkbox'].checked {
 					background-image: url(/images/orange-checkmark.svg);
 					background-position: center;
 					background-repeat: no-repeat;
@@ -115,22 +116,22 @@ class ToDo extends PageViewElement {
 					<div class="to-do-item">
 						<span class="text">Spend a week in solitude - I DID THIS! TWICE!</span>
 						<!-- display: block     -->
-						<input type="checkbox" checked="true" />
+						<input type="checkbox" class="checked" checked="true" />
 					</div>
 					<div class="to-do-item">
 						<span class="text">Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!</span>
 						<!-- display: block     -->
-						<input type="checkbox" checked="true" />
+						<input type="checkbox" class="checked" checked="true" />
 					</div>
 					<div class="to-do-item">
 						<span class="text">Do the Landmark Forum - I DID THIS IT WAS AWESOME!</span>
 						<!-- display: block     -->
-						<input type="checkbox" checked="true" />
+						<input type="checkbox" class="checked" checked="true" />
 					</div>
 					<div class="to-do-item">
 						<span class="text">Drink Ayahuasca - I DID THIS!</span>
 						<!-- display: block     -->
-						<input type="checkbox" checked="true" />
+						<input type="checkbox" class="checked" checked="true" />
 					</div>
 					<div class="to-do-item">
 						<span class="text">Get married? have a kid?</span>
