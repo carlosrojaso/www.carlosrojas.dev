@@ -24,7 +24,7 @@ class ReadingList extends PageViewElement {
 			${SharedStyles} <style></style>
 			<section id="reading-list" class="min-height-fix">
 				<h2 class="text-left">These are the books that have impacted my life this most:</h2>
-				<ul>
+				<ol>
 					<li>
 						The Power of Now by Eckhart Tolle - I avoided this book for years because of its popularity. Anything powerful can’t be popular
 						right? WRONG. I realized it was so popular for a reason: it’s a life changer. I read it five times this year and listened to it
@@ -49,10 +49,10 @@ class ReadingList extends PageViewElement {
 						realized my imagination had literally been taken to places it never had been before. The stories feel like my own memories now.
 						Borges saw the world in a way no one else did or does.
 					</li>
-				</ul>
+				</ol>
 				<h2>Complete 2018 Reading List:</h2>
 				<ol>
-					<li>Douglas</li>
+					<li>Doctor Hudson’s Secret Journal - Lloyd C. Douglas</li>
 					<li>Survivor - Palahniuk</li>
 					<li>The Third Door - Alex Banayan</li>
 					<li>Ask and It Is Given - Esther and Jerry Hicks</li>

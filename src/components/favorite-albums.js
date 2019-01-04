@@ -81,6 +81,7 @@ class FavoriteAlbums extends PageViewElement {
 				.album .copy {
 					width: 100%;
 					padding: 4px;
+					padding-top: 0;
 					font-size: 14px;
 					margin: 0;
 				}
@@ -93,6 +94,7 @@ class FavoriteAlbums extends PageViewElement {
 
 				.album .title {
 					margin: 8px 0;
+					margin-top: 0;
 					font-size: 18px;
 				}
 

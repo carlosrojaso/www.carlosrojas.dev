@@ -36,7 +36,6 @@ class Discography extends PageViewElement {
 					margin: 36px 0;
 					display: flex;
 					align-items: flex-start;
-					flex-direction: row;
 				}
 
 				.album a {
@@ -45,13 +44,14 @@ class Discography extends PageViewElement {
 
 				.album .cover {
 					width: 110px;
-					margin-right: 16px;
+					margin-right: 12px;
 					margin-left: 0;
 					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
 				}
 
 				.album .cover:hover {
 					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+					transition: all 200ms ease;
 				}
 
 				.album .cover.alternate {
@@ -81,6 +81,8 @@ class Discography extends PageViewElement {
 				.album .copy {
 					width: 100%;
 					padding: 4px;
+					padding-top: 0;
+					padding-left: 0;
 					font-size: 14px;
 					margin: 0;
 				}
@@ -91,13 +93,17 @@ class Discography extends PageViewElement {
 					font-weight: bold;
 				}
 
+				.album .year {
+					font-size: 11px;
+				}
+
 				.album .title {
-					margin: 8px 0;
-					font-size: 18px;
+					margin: 4px 0;
+					font-size: 14px;
 				}
 
 				.album .text {
-					font-size: 11px;
+					font-size: 10px;
 				}
 
 				@media (min-width: 660px) {
@@ -107,6 +113,7 @@ class Discography extends PageViewElement {
 
 					.album .cover {
 						width: 220px;
+						margin-right: 30px;
 					}
 
 					.album .cover.alternate {
@@ -118,6 +125,7 @@ class Discography extends PageViewElement {
 					}
 
 					.album .title {
+						margin: 12px 0;
 						font-size: 28px;
 					}
 
