@@ -15,13 +15,29 @@
 			"weight": 1
 		}
 	},
-	"/discography": {
+	"/mission": {
 		"src/components/my-app.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
 		},
-		"src/components/discography.js": {
+		"src/components/mission.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+			"type": "script",
+			"weight": 1
+		}
+	},
+	"/join-the-walk": {
+		"src/components/my-app.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"src/components/join.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
@@ -47,13 +63,13 @@
 			"weight": 1
 		}
 	},
-	"/mission": {
+	"/discography": {
 		"src/components/my-app.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
 		},
-		"src/components/mission.js": {
+		"src/components/discography.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
@@ -63,55 +79,7 @@
 			"weight": 1
 		}
 	},
-	"/accomplishments": {
-		"src/components/my-app.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"src/components/accomplishments.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
-			"type": "script",
-			"weight": 1
-		}
-	},
-	"/to-do": {
-		"src/components/my-app.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"src/components/to-do.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
-			"type": "script",
-			"weight": 1
-		}
-	},
-	"/join": {
-		"src/components/my-app.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"src/components/join.js": {
-			"crossorigin": "anonymous",
-			"type": "script",
-			"weight": 1
-		},
-		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
-			"type": "script",
-			"weight": 1
-		}
-	},
-	"/favorite-albums": {
+	"/my-favorite-albums-of-all-time": {
 		"src/components/my-app.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
@@ -143,13 +111,29 @@
 			"weight": 1
 		}
 	},
-	"/about-me": {
+	"/random-and-subtly-pretentious-list-of-accomplishments": {
 		"src/components/my-app.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
 		},
-		"src/components/about.js": {
+		"src/components/accomplishments.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+			"type": "script",
+			"weight": 1
+		}
+	},
+	"/things-i-want-to-do-before-i-die": {
+		"src/components/my-app.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"src/components/to-do.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
@@ -166,6 +150,22 @@
 			"weight": 1
 		},
 		"src/components/listen.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js": {
+			"type": "script",
+			"weight": 1
+		}
+	},
+	"/about-me": {
+		"src/components/my-app.js": {
+			"crossorigin": "anonymous",
+			"type": "script",
+			"weight": 1
+		},
+		"src/components/about.js": {
 			"crossorigin": "anonymous",
 			"type": "script",
 			"weight": 1
