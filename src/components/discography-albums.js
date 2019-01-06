@@ -1,7 +1,7 @@
 export const albums = [
 	{
 		cover: 'images/reflections-of-a-lost-teen.jpg',
-		url: '/discography',
+		url: null,
 		year: '2006',
 		title: 'Reflections of a Lost Teen',
 		copy:
@@ -37,14 +37,14 @@ export const albums = [
 	},
 	{
 		cover: null,
-		url: '/discography',
+		url: null,
 		year: '2012',
 		title: 'Sky High',
 		copy: '(never released)',
 	},
 	{
 		cover: 'images/pages.jpeg',
-		url: '/discography',
+		url: null,
 		year: '2014',
 		title: 'Pages',
 		copy: '(never released)',

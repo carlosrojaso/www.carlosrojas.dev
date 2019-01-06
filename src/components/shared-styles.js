@@ -85,6 +85,10 @@ export const SharedStyles = html`
 			text-align: center !important;
 		}
 
+		.primary-text {
+			color: var(--app-primary-color) !important;
+		}
+
 		.min-height-fix {
 			min-height: calc(100vh - 303px);
 		}

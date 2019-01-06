@@ -158,6 +158,7 @@ class MyApp extends connect(store)(LitElement) {
 				<my-todo class="page" ?active="${this._page === 'things-i-want-to-do-before-i-die'}"></my-todo>
 				<my-listen class="page" ?active="${this._page === 'listen'}"></my-listen>
 				<my-about class="page" ?active="${this._page === 'about-me'}"></my-about>
+				<my-download class="page" ?active="${this._page === 'download'}"></my-download>
 				<my-404 class="page" ?active="${this._page === '404'}"></my-404>
 			</main>
 

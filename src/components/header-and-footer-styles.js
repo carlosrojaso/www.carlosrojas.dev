@@ -86,7 +86,6 @@ export const HeaderAndFooterStyles = html`
 			line-height: 30px;
 			padding: 12px 18px;
 			transition: all 200ms ease;
-			font-size: 20px;
 		}
 
 		.toolbar-list a[selected] {
@@ -117,8 +116,7 @@ export const HeaderAndFooterStyles = html`
 				position: fixed;
 				top: 0;
 				left: 0;
-				padding-top: 24px;
-				padding: 24px 68px;
+				padding: 24px;
 				background-color: white;
 			}
 
@@ -131,6 +129,11 @@ export const HeaderAndFooterStyles = html`
 				z-index: 1000;
 			}
 
+			.toolbar-list a {
+				font-size: 11px;
+				letter-spacing: -0.5px;
+			}
+
 			.sticky-left {
 				display: inline-flex !important;
 				align-items: center;
@@ -140,21 +143,15 @@ export const HeaderAndFooterStyles = html`
 			}
 		}
 
-		@media (min-width: 1200px) and (max-width: 1217px) {
+		@media (min-width: 1437px) {
 			.toolbar-list a {
-				font-size: 9px;
+				font-size: 16px;
 			}
 		}
 
-		@media (min-width: 1200px) and (max-width: 1436px) {
+		@media (min-width: 1770px) {
 			.toolbar-list a {
-				font-size: 10px;
-			}
-		}
-
-		@media (min-width: 1437px) and (max-width: 1769px) {
-			.toolbar-list a {
-				font-size: 14px;
+				font-size: 22px;
 			}
 		}
 

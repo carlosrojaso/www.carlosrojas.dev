@@ -143,7 +143,12 @@ class Discography extends PageViewElement {
 							album => html`
 								<div class="album">
 									<!-- display: block -->
-									<a href="${album.url}" target="_blank" rel="noreferrer" aria-label="${album.title}">
+									<a
+										href="${album.url ? album.url : '/discography'}"
+										target="${album.url ? '_blank' : ''}"
+										rel="noreferrer"
+										aria-label="${album.title}"
+									>
 										<img class="cover ${album.cover ? '' : 'alternate'}" width="100%" src="${album.cover}" alt="${album.title}" />
 									</a>
 									<div class="copy">

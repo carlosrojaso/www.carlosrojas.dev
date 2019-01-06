@@ -64,6 +64,9 @@ const loadPage = page => dispatch => {
 		case 'about-me':
 			import('../components/about.js');
 			break;
+		case 'download':
+			import('../components/download.js');
+			break;
 		default:
 			page = '404';
 			import('../components/404.js');
