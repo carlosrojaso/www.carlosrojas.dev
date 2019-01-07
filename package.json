@@ -7,7 +7,10 @@
 	"license": "BSD-3-Clause",
 	"repository": "Polymer/pwa-starter-kit",
 	"scripts": {
-		"start": "polymer serve",
+		"old-start": "polymer serve",
+		"start": "npm-run-all -p serve watch",
+		"serve": "polymer serve",
+		"watch": "browser-sync start --proxy localhost:8081 --files \"src/**/*.*, index.html, images/*\"",
 		"build": "npm run build:prpl-server && npm run build:static",
 		"build:firebase": "polymer build --auto-base-path && gulp firebase",
 		"build:prpl-server": "polymer build --auto-base-path && gulp prpl-server",
@@ -33,6 +36,7 @@
 	"devDependencies": {
 		"@polymer/test-fixture": "^4.0.2",
 		"axe-core": "^3.0.0",
+		"browser-sync": "^2.26.3",
 		"chai": "^4.1.2",
 		"del": "^3.0.0",
 		"gulp": "^4.0.0",
@@ -40,6 +44,7 @@
 		"gulp-replace": "^1.0.0",
 		"husky": "^1.3.1",
 		"mocha": "^5.2.0",
+		"npm-run-all": "^4.1.5",
 		"pixelmatch": "^4.0.2",
 		"polymer-cli": "^1.9.3",
 		"polyserve": "^0.27.0",
