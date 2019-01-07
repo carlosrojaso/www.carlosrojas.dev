@@ -21,6 +21,15 @@
 						"value": "no-cache"
 					}
 				]
+			},
+			{
+				"source": "**/*.@(js|jpg|jpeg|svg|webp|png)",
+				"headers": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					}
+				]
 			}
 		]
 	}
