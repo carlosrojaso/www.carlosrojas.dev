@@ -54,30 +54,6 @@ class Discography extends PageViewElement {
 					transition: all 200ms ease;
 				}
 
-				.album .cover.alternate {
-					height: 110px;
-					position: relative;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-				}
-
-				.album .cover.alternate:after {
-					content: 'we never made a cover';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-					background-color: white;
-					color: var(--app-primary-color);
-				}
-
 				.album .copy {
 					width: 100%;
 					padding: 4px;
@@ -149,7 +125,16 @@ class Discography extends PageViewElement {
 										rel="noreferrer"
 										aria-label="${album.title}"
 									>
-										<img class="cover ${album.cover ? '' : 'alternate'}" width="100%" src="${album.cover}" alt="${album.title}" />
+										<picture>
+											<!-- Use WebP on Supported Browsers -->
+											<source
+												srcset="images/${album.svg ? '' : 'webp/'}${album.svg ? album.cover : album.webpcover}"
+												type="image/${album.svg ? 'svg' : 'webp'}"
+											/>
+											<source srcset="images/${album.svg ? '' : 'jpg/'}${album.cover}" type="image/${album.svg ? 'svg' : 'jpg'}" />
+											<!-- Falls back to JPG on Unsupported Browsers -->
+											<img class="cover" width="100%" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
+										</picture>
 									</a>
 									<div class="copy">
 										<div class="year">${album.year}</div>

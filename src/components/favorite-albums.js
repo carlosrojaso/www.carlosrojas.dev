@@ -138,7 +138,16 @@ class FavoriteAlbums extends PageViewElement {
 								<div class="album">
 									<!-- display: block -->
 									<a href="${album.url}" target="_blank" rel="noreferrer" aria-label="${album.title}">
-										<img class="cover ${album.cover ? '' : 'alternate'}" width="100%" src="${album.cover}" alt="${album.title}" />
+										<picture>
+											<!-- Use WebP on Supported Browsers -->
+											<source
+												srcset="images/${album.svg ? '' : 'webp/'}${album.svg ? album.cover : album.webpcover}"
+												type="image/${album.svg ? 'svg' : 'webp'}"
+											/>
+											<source srcset="images/${album.svg ? '' : 'jpg/'}${album.cover}" type="image/${album.svg ? 'svg' : 'jpg'}" />
+											<!-- Falls back to JPG on Unsupported Browsers -->
+											<img class="cover" width="100%" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
+										</picture>
 									</a>
 									<div class="copy">
 										<div class="year">${album.year}</div>
