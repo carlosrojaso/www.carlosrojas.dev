@@ -15,7 +15,8 @@ This template gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
-##Deploy
+## Deploy
+
 `npm run build:firebase`
 `firebase deploy --only functions,hosting`
 

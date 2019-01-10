@@ -15,6 +15,16 @@ import { PageViewElement } from './page-view-element.js';
 import { SharedStyles } from './shared-styles.js';
 
 class Download extends PageViewElement {
+	handleAppleClick() {
+		console.log('Apple click');
+		dataLayer.push({ event: 'apple' });
+	}
+
+	handleSpotifyClick() {
+		console.log('Spotify click');
+		dataLayer.push({ event: 'spotify' });
+	}
+
 	render() {
 		updateMetadata({
 			title: `Mike Posner - "A Real Good Kid"`,
@@ -49,7 +59,13 @@ class Download extends PageViewElement {
 				<div class="sticky-left">
 					<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
 					<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
-					<a class="listen-button spotify" href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93" target="_blank" rel="noreferrer">
+					<a
+						class="listen-button spotify"
+						href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93"
+						target="_blank"
+						rel="noreferrer"
+						@click="${this.handleSpotifyClick}"
+					>
 						<img width="24px" src="images/spotify-icon.svg" alt="Spotify" />
 						<img width="80px" src="images/spotify-copy.svg" alt="Play on Spotify" />
 					</a>
@@ -58,12 +74,19 @@ class Download extends PageViewElement {
 						href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1443035104?mt=1&app=music"
 						target="_blank"
 						rel="noreferrer"
+						@click="${this.handleAppleClick}"
 					>
 						<img width="16px" src="images/apple-icon.svg" alt="Apple Music" />
 						<img width="106px" src="images/apple-copy.svg" alt="Play on Apple Music" />
 					</a>
 				</div>
 			</section>
+			<script>
+				this.shadowRoot.querySelectorAll('.listen-button').click(event => {
+					console.log('From Shadow Root');
+					console.log(event);
+				});
+			</script>
 		`;
 	}
 }
