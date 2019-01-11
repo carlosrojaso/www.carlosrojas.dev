@@ -67,7 +67,7 @@ class MyApp extends connect(store)(LitElement) {
 			</style>
 
 			<!-- Mobile Header -->
-			<app-header condenses reveals effects="waterfall">
+			<app-header class="${this._page === 'download' ? 'show' : ''}" condenses reveals effects="waterfall">
 				<app-toolbar class="toolbar-top">
 					<button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
 					<div main-title><a href="/" aria-label="Mike Posner">${mikePosner}</a></div>
@@ -75,7 +75,7 @@ class MyApp extends connect(store)(LitElement) {
 			</app-header>
 
 			<!-- Desktop Navigation Links -->
-			<nav class="toolbar-list">
+			<nav class="toolbar-list ${this._page === 'download' ? 'hide' : ''}">
 				<a ?selected="${this._page === 'mission'}" href="/mission">Mission</a>
 				<a ?selected="${this._page === 'join-the-walk'}" href="/join-the-walk">Join The Walk</a>
 				<a ?selected="${this._page === 'tour'}" href="/tour">Tour</a>
@@ -98,7 +98,7 @@ class MyApp extends connect(store)(LitElement) {
 			</nav>
 
 			<!-- Play Album Sticky Leftside -->
-			<div class="sticky-left">
+			<div class="sticky-left ${this._page === 'download' ? 'hide' : ''}">
 				<a href="/" aria-label="Mike Posner"><img class="logo" width="210px" src="images/mike-posner.svg" alt="Mike Posner"/></a>
 				<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
 				<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />

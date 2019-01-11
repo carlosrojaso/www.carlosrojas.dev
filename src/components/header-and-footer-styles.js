@@ -25,6 +25,10 @@ export const HeaderAndFooterStyles = html`
 			z-index: 1000;
 		}
 
+		app-header.show {
+			display: block !important;
+		}
+
 		.toolbar-top {
 			background-color: white;
 		}
@@ -121,12 +125,15 @@ export const HeaderAndFooterStyles = html`
 			}
 
 			.toolbar-list {
-				display: block !important;
 				width: 100%;
 				padding-left: 378px;
 				box-sizing: border-box;
 				text-align: right;
 				z-index: 1000;
+			}
+
+			.toolbar-list:not(.hide) {
+				display: block !important;
 			}
 
 			.toolbar-list a {
@@ -135,11 +142,14 @@ export const HeaderAndFooterStyles = html`
 			}
 
 			.sticky-left {
-				display: inline-flex !important;
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
 				z-index: 2000;
+			}
+
+			.sticky-left:not(.hide) {
+				display: inline-flex !important;
 			}
 		}
 

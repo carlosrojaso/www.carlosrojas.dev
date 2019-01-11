@@ -101,6 +101,10 @@ export const SharedStyles = html`
 			color: white;
 		}
 
+		.hide {
+			display: none !important;
+		}
+
 		@media (min-width: 1200px) {
 			.min-height-fix {
 				min-height: calc(100vh - 346px);

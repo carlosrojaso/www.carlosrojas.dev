@@ -36,6 +36,11 @@ class Download extends PageViewElement {
 			<style>
 				#download {
 					background: white;
+					padding: 0;
+					padding-left: initial;
+					padding-right: initial;
+					text-align: center;
+					margin: 0 auto;
 				}
 
 				.sticky-left {
@@ -54,14 +59,13 @@ class Download extends PageViewElement {
 				}
 			</style>
 			<section id="download" class="min-height-fix">
-				<h2 class="primary-text">Download</h2>
 				<!-- Play Album Sticky Leftside -->
 				<div class="sticky-left">
 					<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
 					<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
 					<a
 						class="listen-button spotify"
-						href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93"
+						href="https://open.spotify.com/track/3KTVQGLS2np8dWe5s4F9EN"
 						target="_blank"
 						rel="noreferrer"
 						@click="${this.handleSpotifyClick}"
@@ -71,7 +75,7 @@ class Download extends PageViewElement {
 					</a>
 					<a
 						class="listen-button apple"
-						href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1443035104?mt=1&app=music"
+						href="https://geo.itunes.apple.com/us/album/move-on/1443035104?i=1443035109&mt=1&app=music"
 						target="_blank"
 						rel="noreferrer"
 						@click="${this.handleAppleClick}"
