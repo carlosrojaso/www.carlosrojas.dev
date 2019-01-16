@@ -16,12 +16,10 @@ import { SharedStyles } from './shared-styles.js';
 
 class Download extends PageViewElement {
 	handleAppleClick() {
-		console.log('Apple click');
 		dataLayer.push({ event: 'apple' });
 	}
 
 	handleSpotifyClick() {
-		console.log('Spotify click');
 		dataLayer.push({ event: 'spotify' });
 	}
 
@@ -43,6 +41,11 @@ class Download extends PageViewElement {
 					margin: 0 auto;
 				}
 
+				.download-copy {
+					display: block;
+					margin: 16px auto;
+				}
+
 				.sticky-left {
 					position: relative;
 					padding: 24px;
@@ -59,6 +62,7 @@ class Download extends PageViewElement {
 				}
 			</style>
 			<section id="download" class="min-height-fix">
+				<img width="200px" class="download-copy" src="images/download-brown.svg" alt="Download" />
 				<!-- Play Album Sticky Leftside -->
 				<div class="sticky-left">
 					<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
@@ -71,7 +75,7 @@ class Download extends PageViewElement {
 						@click="${this.handleSpotifyClick}"
 					>
 						<img width="24px" src="images/spotify-icon.svg" alt="Spotify" />
-						<img width="80px" src="images/spotify-copy.svg" alt="Play on Spotify" />
+						<img width="100px" src="images/spotify-copy.svg" alt="Play on Spotify" />
 					</a>
 					<a
 						class="listen-button apple"
@@ -81,16 +85,10 @@ class Download extends PageViewElement {
 						@click="${this.handleAppleClick}"
 					>
 						<img width="16px" src="images/apple-icon.svg" alt="Apple Music" />
-						<img width="106px" src="images/apple-copy.svg" alt="Play on Apple Music" />
+						<img width="125px" src="images/apple-copy.svg" alt="Play on Apple Music" />
 					</a>
 				</div>
 			</section>
-			<script>
-				this.shadowRoot.querySelectorAll('.listen-button').click(event => {
-					console.log('From Shadow Root');
-					console.log(event);
-				});
-			</script>
 		`;
 	}
 }
