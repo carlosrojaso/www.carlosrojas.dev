@@ -84,7 +84,7 @@ class Download extends PageViewElement {
 						rel="noreferrer"
 						@click="${this.handleAppleClick}"
 					>
-						<img width="16px" src="images/apple-icon.svg" alt="Apple Music" />
+						<img width="20px" src="images/apple-icon.svg" alt="Apple Music" />
 						<img width="125px" src="images/apple-copy.svg" alt="Play on Apple Music" />
 					</a>
 				</div>
