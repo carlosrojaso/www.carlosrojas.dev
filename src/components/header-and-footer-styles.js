@@ -25,10 +25,6 @@ export const HeaderAndFooterStyles = html`
 			z-index: 1000;
 		}
 
-		app-header.show {
-			display: block !important;
-		}
-
 		.toolbar-top {
 			background-color: white;
 		}
@@ -78,91 +74,6 @@ export const HeaderAndFooterStyles = html`
 
 		.drawer-list a[selected] {
 			color: var(--app-drawer-selected-color);
-		}
-
-		/* ****************************
-                DESKTOP HEADER
-        ***************************** */
-		.toolbar-list a {
-			display: inline-block;
-			color: var(--app-header-text-color);
-			text-decoration: none;
-			line-height: 30px;
-			padding: 12px 18px;
-			transition: all 200ms ease;
-		}
-
-		.toolbar-list a[selected] {
-			color: var(--app-header-selected-color);
-		}
-
-		.toolbar-list a:hover:not([selected]) {
-			color: var(--app-header-hover-color);
-			transition: all 200ms ease;
-		}
-
-		.sticky-left .logo {
-			margin-bottom: 36px;
-		}
-
-		.sticky-left .listen {
-			margin-top: 28px;
-			margin-bottom: 22px;
-		}
-
-		.sticky-left a:last-child {
-			margin-top: 8px;
-		}
-
-		@media (min-width: 1200px) {
-			.sticky-left,
-			.toolbar-list {
-				position: fixed;
-				top: 0;
-				left: 0;
-				padding: 24px;
-				background-color: white;
-			}
-
-			.toolbar-list {
-				width: 100%;
-				padding-left: 378px;
-				box-sizing: border-box;
-				text-align: right;
-				z-index: 1000;
-			}
-
-			.toolbar-list:not(.hide) {
-				display: block !important;
-			}
-
-			.toolbar-list a {
-				font-size: 11px;
-				letter-spacing: -0.5px;
-			}
-
-			.sticky-left {
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				z-index: 2000;
-			}
-
-			.sticky-left:not(.hide) {
-				display: inline-flex !important;
-			}
-		}
-
-		@media (min-width: 1437px) {
-			.toolbar-list a {
-				font-size: 16px;
-			}
-		}
-
-		@media (min-width: 1770px) {
-			.toolbar-list a {
-				font-size: 22px;
-			}
 		}
 
 		/* ****************************

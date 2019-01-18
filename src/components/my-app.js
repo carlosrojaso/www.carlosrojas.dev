@@ -54,68 +54,15 @@ class MyApp extends connect(store)(LitElement) {
 				app-drawer {
 					z-index: 4000;
 				}
-
-				@media (min-width: 1200px) {
-					.main-content {
-						padding-top: 156px;
-					}
-
-					app-header {
-						display: none;
-					}
-				}
 			</style>
 
 			<!-- Mobile Header -->
-			<app-header class="${this._page === 'download' ? 'show' : ''}" condenses reveals effects="waterfall">
+			<app-header class="show" condenses reveals effects="waterfall">
 				<app-toolbar class="toolbar-top">
 					<button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
 					<div main-title><a href="/" aria-label="Mike Posner">${mikePosner}</a></div>
 				</app-toolbar>
 			</app-header>
-
-			<!-- Desktop Navigation Links -->
-			<nav class="toolbar-list ${this._page === 'download' ? 'hide' : ''}">
-				<a ?selected="${this._page === 'mission'}" href="/mission">Mission</a>
-				<a ?selected="${this._page === 'join-the-walk'}" href="/join-the-walk">Join The Walk</a>
-				<a ?selected="${this._page === 'tour'}" href="/tour">Tour</a>
-				<a ?selected="${this._page === 'discography'}" href="/discography">Discography</a>
-				<a ?selected="${this._page === 'my-favorite-albums-of-all-time'}" href="/my-favorite-albums-of-all-time"
-					>My Favorite Albums of All Time</a
-				>
-				<a ?selected="${this._page === 'reading-list'}" href="/reading-list">Reading List</a>
-				<a
-					?selected="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
-					href="/random-and-subtly-pretentious-list-of-accomplishments"
-					>Random and Subtly Pretentious List of Accomplishments</a
-				>
-				<a ?selected="${this._page === 'things-i-want-to-do-before-i-die'}" href="/things-i-want-to-do-before-i-die"
-					>Things I Want To Do Before I Die</a
-				>
-				<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
-				<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
-				<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
-			</nav>
-
-			<!-- Play Album Sticky Leftside -->
-			<div class="sticky-left ${this._page === 'download' ? 'hide' : ''}">
-				<a href="/" aria-label="Mike Posner"><img class="logo" width="210px" src="images/mike-posner.svg" alt="Mike Posner"/></a>
-				<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
-				<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
-				<a class="listen-button" href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93" target="_blank" rel="noreferrer">
-					<img width="24px" src="images/spotify-icon.svg" alt="Spotify" />
-					<img width="80px" src="images/spotify-copy.svg" alt="Play on Spotify" />
-				</a>
-				<a
-					class="listen-button"
-					href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1443035104?mt=1&app=music"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img width="16px" src="images/apple-icon.svg" alt="Apple Music" />
-					<img width="106px" src="images/apple-copy.svg" alt="Play on Apple Music" />
-				</a>
-			</div>
 
 			<!-- Drawer content -->
 			<app-drawer .opened="${this._drawerOpened}" @opened-changed="${this._drawerOpenedChanged}">

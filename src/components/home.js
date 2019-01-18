@@ -29,6 +29,7 @@ class Home extends PageViewElement {
 				}
 
 				p.text-center {
+					margin-top: 4rem;
 					margin-bottom: 4rem;
 				}
 
@@ -49,11 +50,11 @@ class Home extends PageViewElement {
 			</style>
 			<section id="home">
 				<div class="container"><img width="100%" src="images/posner-walk.svg" alt="Logo" /></div>
-				<div class="container state-map"><img width="100%" src="images/state-map.svg" alt="Logo" /></div>
 				<p class="text-center">
 					Starting March 1, 2019, I will be walking from the Atlantic Ocean to the Pacific Ocean. The journey will take me most of my 31st
 					year. You are welcome to join at any time. I’ll be announcing details soon 😊🦁✨🌼🌳🤴.
 				</p>
+				<div class="container state-map"><img width="100%" src="images/state-map.svg" alt="Logo" /></div>
 			</section>
 		`;
 	}

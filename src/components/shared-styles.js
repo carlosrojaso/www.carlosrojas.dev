@@ -108,18 +108,6 @@ export const SharedStyles = html`
 		@media (min-width: 1200px) {
 			.min-height-fix {
 				min-height: calc(100vh - 346px);
-				padding-left: 378px;
-				padding-right: 68px;
-			}
-
-			.min-height-fix * {
-				margin: 0;
-			}
-		}
-
-		@media (min-width: 1660px) {
-			.min-height-fix {
-				padding: 23px;
 			}
 
 			.min-height-fix * {

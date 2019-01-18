@@ -44,6 +44,7 @@ class Download extends PageViewElement {
 				.download-copy {
 					display: block;
 					margin: 16px auto;
+					margin-top: 3rem;
 				}
 
 				.sticky-left {
@@ -54,6 +55,11 @@ class Download extends PageViewElement {
 					align-items: center;
 					justify-content: center;
 					flex-direction: column;
+				}
+
+				.listen,
+				.listen-button.apple {
+					margin: 1rem auto;
 				}
 
 				.listen-button * {
