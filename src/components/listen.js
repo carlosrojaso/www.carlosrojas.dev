@@ -61,14 +61,14 @@ class Listen extends PageViewElement {
 								height="380"
 								style="width:100%;max-width:300px;overflow:hidden;background:transparent;"
 								sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-								src="https://embed.music.apple.com/us/album/a-real-good-kid/1443035104?app=music"
+								src="https://embed.music.apple.com/us/album/a-real-good-kid/1449093091?app=music"
 							></iframe>
 						</div>
 						<div class="option spotify">
 							<h3>Spotify</h3>
 							<iframe
 								title="Spotify Embed"
-								src="https://open.spotify.com/embed/user/officialmikeposner/playlist/0CQgU6sHvsuglnOKlpP9Jz"
+								src="https://open.spotify.com/embed/album/4Ud6qdjOiGsrryFeZOVmkT"
 								width="300"
 								height="380"
 								frameborder="0"

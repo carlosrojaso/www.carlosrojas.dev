@@ -94,7 +94,7 @@ export const albums = [
 		cover: 'album-cover.svg',
 		svg: true,
 		webpcover: 'album-cover.webp',
-		url: 'https://open.spotify.com/artist/2KsP6tYLJlTBvSUxnwlVWa',
+		url: 'https://islandrecs.lnk.to/ARealGoodKid',
 		year: '2018',
 		title: 'A Real Good Kid.',
 		copy: 'This is the best album ever. Seriously, I really love this album.',
