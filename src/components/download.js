@@ -69,7 +69,7 @@ class Download extends PageViewElement {
 					<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
 					<a
 						class="listen-button spotify"
-						href="https://open.spotify.com/track/3KTVQGLS2np8dWe5s4F9EN"
+						href="https://open.spotify.com/album/4Ud6qdjOiGsrryFeZOVmkT"
 						target="_blank"
 						rel="noreferrer"
 						@click="${this.handleSpotifyClick}"
@@ -79,7 +79,7 @@ class Download extends PageViewElement {
 					</a>
 					<a
 						class="listen-button apple"
-						href="https://geo.itunes.apple.com/us/album/move-on/1443035104?i=1443035109&mt=1&app=music"
+						href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1449093091?mt=1&app=music"
 						target="_blank"
 						rel="noreferrer"
 						@click="${this.handleAppleClick}"

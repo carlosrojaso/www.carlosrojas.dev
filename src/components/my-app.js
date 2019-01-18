@@ -102,13 +102,13 @@ class MyApp extends connect(store)(LitElement) {
 				<a href="/" aria-label="Mike Posner"><img class="logo" width="210px" src="images/mike-posner.svg" alt="Mike Posner"/></a>
 				<img width="170px" src="images/album-cover.svg" alt="A Real Good Kid Album Cover" />
 				<img class="listen" width="160px" src="images/listen-copy.svg" alt="Listen to A Real Good Kid" />
-				<a class="listen-button" href="https://open.spotify.com/track/0Knc89pMAsIZbK8tor7i93" target="_blank" rel="noreferrer">
+				<a class="listen-button" href="https://open.spotify.com/album/4Ud6qdjOiGsrryFeZOVmkT" target="_blank" rel="noreferrer">
 					<img width="24px" src="images/spotify-icon.svg" alt="Spotify" />
 					<img width="80px" src="images/spotify-copy.svg" alt="Play on Spotify" />
 				</a>
 				<a
 					class="listen-button"
-					href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1443035104?mt=1&app=music"
+					href="https://geo.itunes.apple.com/us/album/a-real-good-kid/1449093091?mt=1&app=music"
 					target="_blank"
 					rel="noreferrer"
 				>
