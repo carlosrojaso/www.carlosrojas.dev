@@ -75,7 +75,7 @@ class Listen extends PageViewElement {
 								height="380"
 								style="width:100%;max-width:300px;overflow:hidden;background:transparent;"
 								sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-								src="https://embed.music.apple.com/us/album/a-real-good-kid/1443035104?app=music"
+								src="https://embed.music.apple.com/us/album/a-real-good-kid/1449093091?app=music"
 							></iframe>
 						</div>
 					</div>
