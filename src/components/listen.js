@@ -23,6 +23,14 @@ class Listen extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
+			<style>
 				.white-box {
 					background-color: #f8f8fa;
 					border-radius: 0px;

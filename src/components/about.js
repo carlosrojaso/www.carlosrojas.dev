@@ -23,6 +23,14 @@ class About extends PageViewElement {
 
 		return html`
 			${SharedStyles}
+			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
 			<section id="about" class="container">
 				<h2 class="heading">About Me</h2>
 				<p class="jumbo">i was born in detroit on a very, very, very, very, very, very, very cold day.</p>

@@ -22,7 +22,15 @@ class Join extends PageViewElement {
 		});
 
 		return html`
-			${SharedStyles} <style></style>
+			${SharedStyles}
+			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
 			<section id="join" class="container">
 				<h2 class="heading">Join The Walk</h2>
 				<p class="body">

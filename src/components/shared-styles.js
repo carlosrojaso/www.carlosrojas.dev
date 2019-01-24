@@ -171,7 +171,7 @@ export const SharedStyles = html`
 				min-height: calc(100vh - 346px);
 			}
 
-			.container > * {
+			.container > *:not(.heading) {
 				margin: 0 auto;
 			}
 		}

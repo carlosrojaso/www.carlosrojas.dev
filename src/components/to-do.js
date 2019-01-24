@@ -24,6 +24,14 @@ class ToDo extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
+			<style>
 				input[type='checkbox'] {
 					width: 30px;
 					min-width: 30px;

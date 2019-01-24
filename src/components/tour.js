@@ -24,6 +24,14 @@ class Tour extends PageViewElement {
 
 		return html`
 			${SharedStyles}
+			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
 			<section class="container">
 				<h2 class="heading">Tour</h2>
 				<p class="jumbo">

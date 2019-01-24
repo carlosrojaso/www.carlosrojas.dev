@@ -27,6 +27,14 @@ class Discography extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				@media (max-width: 600px) {
+					.heading {
+						font-size: 42px;
+						line-height: 42px;
+					}
+				}
+			</style>
+			<style>
 				.heading {
 					margin-bottom: 0;
 				}
