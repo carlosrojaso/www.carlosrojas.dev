@@ -10,6 +10,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 import { html } from '@polymer/lit-element';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
+import { repeat } from '../../node_modules/lit-html/directives/repeat';
+import { accomplishments } from './accomplishments-list';
 import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
@@ -23,20 +25,30 @@ class Accomplishments extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
-				<h2 class="text-left">Random and Subtly Pretentious List of Accomplishments</h2>
-				<ol>
-					<li>Graduated from Duke University</li>
-					<li>Made a bunch of songs</li>
-					<li>Got a record deal</li>
-					<li>Made a few super duper popular songs (cooler than me, I took a pill in ibiza)</li>
-					<li>Dyed my hair green for a while</li>
-					<li>Got nominated for a Grammy…for song of the year!!!! (I didn’t win the previously mentioned grammy…Adele did)</li>
-					<li>Wrote a song for Justin Bieber</li>
-					<li>Learn guitar and piano and singing as an adult, actually after I started to have hits!</li>
-					<li>Had a spiritual experience meeting Ram Dass</li>
-					<li>Met Jay-Z…TWICE! WOW - I must be a big deal!</li>
-				</ol>
+			<style>
+				.subheading {
+					margin-top: 3rem;
+					font-size: 32px;
+					line-height: 34px;
+				}
+
+				.body {
+					margin-top: 0.5rem;
+				}
+			</style>
+			<section id="accomplishments" class="container">
+				<h2 class="heading">Random and Subtly Pretentious List of Accomplishments</h2>
+				<div class="body">
+					${
+						repeat(
+							accomplishments,
+							(accomplishment, index) => html`
+								<div class="subheading">${index + 1}</div>
+								<div class="body">${accomplishment.text}</div>
+							`
+						)
+					}
+				</div>
 			</section>
 		`;
 	}

@@ -23,9 +23,9 @@ class About extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section id="404" class="min-height-fix">
-				<h2 class="text-left">About Me</h2>
-				<p>i was born in detroit on a very, very, very, very, very, very, very cold day.</p>
+			<section id="about" class="container">
+				<h2 class="heading">About Me</h2>
+				<p class="jumbo">i was born in detroit on a very, very, very, very, very, very, very cold day.</p>
 			</section>
 		`;
 	}

@@ -23,15 +23,15 @@ class Join extends PageViewElement {
 
 		return html`
 			${SharedStyles} <style></style>
-			<section id="join" class="min-height-fix">
-				<h2 class="text-left">Join The Walk</h2>
-				<p>
+			<section id="join" class="container">
+				<h2 class="heading">Join The Walk</h2>
+				<p class="body">
 					The Walk begins March 1, 2019. I will be announcing specifics in the upcoming weeks. Follow me on Instagram for additional
 					information. Anyone is welcome to walk with me at any time during my journey. I will be practicing deep listening. What does this
 					mean? i will be spending periods of my walk compassionately listening to people with as much of my full attention as possible. If
 					you need to be heard...I’m there to hear. Conditions of Walking:
 				</p>
-				<ul>
+				<ul class="body text-left">
 					<li>You are responsible for being able to physically walk. This is no easy ride.</li>
 					<li>
 						You will NOT bring or use drugs or alcohol of any sort. This includes marijuana. We will be guests in towns across the country

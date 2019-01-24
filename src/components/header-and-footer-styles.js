@@ -70,6 +70,7 @@ export const HeaderAndFooterStyles = html`
 			font-size: 16px;
 			line-height: 24px;
 			margin-bottom: 16px;
+			font-weight: 600;
 		}
 
 		.drawer-list a[selected] {

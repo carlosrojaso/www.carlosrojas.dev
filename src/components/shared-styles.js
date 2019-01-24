@@ -39,44 +39,86 @@ export const SharedStyles = html`
 			--app-drawer-hover-color: var(--app-selected-color);
 		}
 
-		section {
+		section.container {
 			padding: 24px;
-			background: var(--app-section-odd-color);
+			min-height: calc(100vh - 303px);
+			background-color: var(--app-primary-color);
 		}
 
-		section * {
+		section > * {
 			max-width: 648px;
 			margin-right: auto;
 			margin-left: auto;
 		}
 
-		section:nth-of-type(even) {
-			background: var(--app-section-even-color);
-		}
-
-		/* Typeography */
-		h2 {
+		/* Typography */
+		.heading {
 			font-size: 24px;
+			line-height: 35px;
+			letter-spacing: 0.8px;
+			font-weight: 400;
 			text-align: center;
-			color: var(--app-dark-text-color);
+			color: var(--app-secondary-color);
+			text-transform: uppercase;
 		}
 
-		h3 {
+		.subheading {
 			text-align: center;
+			font-size: 20px;
+			line-height: 26px;
+			text-transform: uppercase;
+			color: var(--app-secondary-color);
+			font-weight: 300;
 		}
 
-		p {
+		.body {
 			margin-top: 16px;
 			margin-bottom: 16px;
+			font-size: 18px;
+			line-height: 34px;
+			text-align: center;
+			color: white;
+			font-weight: 300;
 		}
 
-		@media (min-width: 1200px) {
-			h2 {
+		.jumbo {
+			margin-top: 16px;
+			margin-bottom: 16px;
+			font-size: 26px;
+			line-height: 45px;
+			text-align: center;
+			color: white;
+		}
+
+		@media (min-width: 600px) {
+			.heading {
+				font-size: 38px;
+				line-height: 48px;
+			}
+		}
+
+		@media (min-width: 900px) {
+			.heading {
+				font-size: 48px;
+				line-height: 58px;
+			}
+
+			.subheading {
+				font-size: 32px;
+				line-height: 38px;
+			}
+
+			.jumbo {
 				font-size: 36px;
+				line-height: 58px;
 			}
 		}
 
 		/* Utility Classes */
+		.text-uppercase {
+			text-transform: uppercase;
+		}
+
 		.text-left {
 			text-align: left !important;
 		}
@@ -85,32 +127,51 @@ export const SharedStyles = html`
 			text-align: center !important;
 		}
 
+		.text-link {
+			text-decoration: underline;
+			transition: all 300ms ease;
+		}
+
+		.text-link:hover {
+			text-decoration: none;
+			transition: all 300ms ease;
+		}
+
+		.text-white {
+			color: white !important;
+		}
+
 		.primary-text {
 			color: var(--app-primary-color) !important;
-		}
-
-		.min-height-fix {
-			min-height: calc(100vh - 303px);
-		}
-
-		section.min-height-fix {
-			background-color: var(--app-primary-color);
-		}
-
-		section.min-height-fix * {
-			color: white;
 		}
 
 		.hide {
 			display: none !important;
 		}
 
+		.d-block {
+			display: block !important;
+		}
+
+		.d-inline-block {
+			display: inline-block !important;
+		}
+
+		.d-table {
+			display: table !important;
+		}
+
+		.mx-auto {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
 		@media (min-width: 1200px) {
-			.min-height-fix {
+			.container {
 				min-height: calc(100vh - 346px);
 			}
 
-			.min-height-fix * {
+			.container > * {
 				margin: 0 auto;
 			}
 		}

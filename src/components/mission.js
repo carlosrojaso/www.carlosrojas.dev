@@ -23,9 +23,9 @@ class Mission extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
-				<h2 class="text-left">My Mission</h2>
-				<p>My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
+			<section class="container">
+				<h2 class="heading">My Mission</h2>
+				<p class="jumbo">My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
 			</section>
 		`;
 	}

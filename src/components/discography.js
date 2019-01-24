@@ -12,6 +12,7 @@ import { html } from '@polymer/lit-element';
 import { repeat } from 'lit-html/directives/repeat.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { albums } from './discography-albums.js';
+import { apple, spotify } from './my-icons.js';
 import { PageViewElement } from './page-view-element.js';
 // These are the shared styles needed by this element.
 import { SharedStyles } from './shared-styles.js';
@@ -26,92 +27,85 @@ class Discography extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				.heading {
+					margin-bottom: 0;
+				}
+
 				.albums {
-					width: 100%;
-					margin-top: 36px;
+					margin-top: 5rem;
 				}
 
-				.album {
-					width: 100%;
-					margin: 36px 0;
-					display: flex;
-					align-items: flex-start;
-				}
-
-				.album a {
-					margin: 0;
+				.album:not(:first-of-type) {
+					margin-top: 5rem;
 				}
 
 				.album .cover {
-					width: 110px;
-					margin-right: 12px;
-					margin-left: 0;
+					max-width: 220px;
+					margin-bottom: 19px;
+				}
+
+				.album .cover img {
 					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
 				}
 
-				.album .cover:hover {
-					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+				.album .cover img:hover {
 					transition: all 200ms ease;
+					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+				}
+
+				.album .heading {
+					font-size: 32px;
+					line-height: 38px;
+					font-size: 25px;
+					line-height: 32px;
+					margin: 0 auto;
+					text-decoration: none;
+				}
+
+				.album .year {
+					margin-top: 0;
 				}
 
 				.album .copy {
-					width: 100%;
-					padding: 4px;
-					padding-top: 0;
-					padding-left: 0;
-					font-size: 14px;
-					margin: 0;
+					margin-top: 0;
 				}
 
-				.album .title,
-				.album .year {
-					color: var(--app-secondary-color);
-					font-weight: bold;
+				.album .listening-options,
+				.album .listening-options a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
 				}
 
-				.album .year {
-					font-size: 11px;
+				.album .listening-options a {
+					width: 35px;
+					height: 35px;
+					background: var(--app-secondary-color);
+					border-radius: 50%;
+					text-align: center;
+					flex-direction: column;
+					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
 				}
 
-				.album .title {
-					margin: 4px 0;
-					font-size: 14px;
+				.album .listening-options a:hover {
+					transition: all 200ms ease;
+					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
 				}
 
-				.album .text {
-					font-size: 10px;
+				.album .listening-options a:not(:last-of-type) {
+					margin-right: 1rem;
 				}
 
-				@media (min-width: 660px) {
-					.album {
-						margin: 64px 0;
-					}
-
-					.album .cover {
-						width: 220px;
-						margin-right: 30px;
-					}
-
-					.album .cover.alternate {
-						height: 220px;
-					}
-
-					.album .year {
-						font-size: 22px;
-					}
-
-					.album .title {
-						margin: 12px 0;
-						font-size: 28px;
-					}
-
-					.album .text {
-						font-size: 16px;
-					}
+				.album .listening-options a svg {
+					width: 20px;
+					height: 20px;
+					fill: var(--app-tertiary-color);
 				}
 			</style>
-			<section class="min-height-fix">
-				<h2 class="text-left">Discography - These are all the albums/projects I’ve ever made.</h2>
+			<section id="discography" class="container">
+				<h2 class="heading">Discography</h2>
+				<p class="body">These are all the albums/projects I’ve ever made.</p>
 				<div class="albums">
 					${
 						repeat(
@@ -120,8 +114,9 @@ class Discography extends PageViewElement {
 								<div class="album">
 									<!-- display: block -->
 									<a
-										href="${album.url ? album.url : '/discography'}"
-										target="${album.url ? '_blank' : ''}"
+										class="cover d-table mx-auto"
+										href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+										target="${album.spotifyUrl ? '_blank' : ''}"
 										rel="noreferrer"
 										aria-label="${album.title}"
 									>
@@ -133,13 +128,39 @@ class Discography extends PageViewElement {
 											/>
 											<source srcset="images/${album.svg ? '' : 'jpg/'}${album.cover}" type="image/${album.svg ? 'svg' : 'jpg'}" />
 											<!-- Falls back to JPG on Unsupported Browsers -->
-											<img class="cover" width="100%" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
+											<img width="220px" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
 										</picture>
 									</a>
-									<div class="copy">
-										<div class="year">${album.year}</div>
-										<div class="title">${album.title}</div>
-										<div class="text">${album.copy}</div>
+									<a
+										class="body heading"
+										href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+										target="${album.spotifyUrl ? '_blank' : ''}"
+										rel="noreferrer"
+										aria-label="${album.title}"
+									>
+										<div class="heading text-uppercase">${album.title}</div>
+									</a>
+									<div class="body year">${album.year}</div>
+									<div class="body copy">${album.copy}</div>
+									<div class="listening-options">
+										<a
+											class="spotify ${album.spotifyUrl ? 'show' : 'hide'}"
+											href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+											target="${album.spotifyUrl ? '_blank' : ''}"
+											rel="noreferrer"
+											aria-label="${album.title}"
+										>
+											${spotify}
+										</a>
+										<a
+											class="apple-music ${album.appleMusicUrl ? 'show' : 'hide'}"
+											href="${album.appleMusicUrl ? album.appleMusicUrl : '/discography'}"
+											target="${album.appleMusicUrl ? '_blank' : ''}"
+											rel="noreferrer"
+											aria-label="${album.title}"
+										>
+											${apple}
+										</a>
 									</div>
 								</div>
 							`

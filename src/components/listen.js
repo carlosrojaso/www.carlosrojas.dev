@@ -23,6 +23,12 @@ class Listen extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				.white-box {
+					background-color: #f8f8fa;
+					border-radius: 0px;
+					height: 380px;
+				}
+
 				.listening-options {
 					display: flex;
 					align-items: center;
@@ -38,6 +44,14 @@ class Listen extends PageViewElement {
 					margin-left: 24px;
 				}
 
+				.option.apple-music iframe {
+					box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.25);
+				}
+
+				.option.spotify iframe {
+					box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.25);
+				}
+
 				@media (max-width: 695px) {
 					.listening-options {
 						flex-direction: column;
@@ -48,12 +62,12 @@ class Listen extends PageViewElement {
 					}
 				}
 			</style>
-			<section id="listen" class="min-height-fix">
-				<div class="container">
-					<h2>Listen</h2>
-					<div class="listening-options">
-						<div class="option apple-music">
-							<h3>Apple Music</h3>
+			<section id="listen" class="container">
+				<h2 class="heading">Listen</h2>
+				<div class="listening-options">
+					<div class="option apple-music">
+						<h3 class="subheading">Apple Music</h3>
+						<div class="white-box">
 							<iframe
 								title="Apple Music Embed"
 								allow="autoplay *; encrypted-media *;"
@@ -64,18 +78,18 @@ class Listen extends PageViewElement {
 								src="https://embed.music.apple.com/us/album/a-real-good-kid/1443035104?app=music"
 							></iframe>
 						</div>
-						<div class="option spotify">
-							<h3>Spotify</h3>
-							<iframe
-								title="Spotify Embed"
-								src="https://open.spotify.com/embed/user/officialmikeposner/playlist/0CQgU6sHvsuglnOKlpP9Jz"
-								width="300"
-								height="380"
-								frameborder="0"
-								allowtransparency="true"
-								allow="encrypted-media"
-							></iframe>
-						</div>
+					</div>
+					<div class="option spotify">
+						<h3 class="subheading">Spotify</h3>
+						<iframe
+							title="Spotify Embed"
+							src="https://open.spotify.com/embed/user/officialmikeposner/playlist/0CQgU6sHvsuglnOKlpP9Jz"
+							width="300"
+							height="380"
+							frameborder="0"
+							allowtransparency="true"
+							allow="encrypted-media"
+						></iframe>
 					</div>
 				</div>
 			</section>

@@ -23,6 +23,9 @@ class Home extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				#home {
+					background: white;
+				}
 				.state-map {
 					margin-top: 4rem;
 					margin-bottom: 4rem;
@@ -38,18 +41,13 @@ class Home extends PageViewElement {
 						margin-top: 30px;
 					}
 
-					#home > .container {
-						text-align: center;
-					}
-
-					#home > .container > img,
-					#home > .container > svg {
+					#home > .logo > img {
 						width: 80%;
 					}
 				}
 			</style>
-			<section id="home">
-				<div class="container"><img width="100%" src="images/posner-walk.svg" alt="Logo" /></div>
+			<section id="home" class="container">
+				<div class="logo text-center"><img width="100%" src="images/posner-walk.svg" alt="Logo" /></div>
 				<p class="text-center">
 					Starting March 1, 2019, I will be walking from the Atlantic Ocean to the Pacific Ocean. The journey will take me most of my 31st
 					year. You are welcome to join at any time. I’ll be announcing details soon 😊🦁✨🌼🌳🤴.

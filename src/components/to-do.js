@@ -48,115 +48,115 @@ class ToDo extends PageViewElement {
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background: url('esm-bundled/images/orange-checkmark.svg'), url('es6-bundled/images/orange-checkmark.svg'),
-						url('es5-bundled/images/orange-checkmark.svg'), url('images/orange-checkmark.svg');
+					background: url('esm-bundled/images/checkmark.svg'), url('es6-bundled/images/checkmark.svg'),
+						url('es5-bundled/images/checkmark.svg'), url('images/checkmark.svg');
 					background-position: center;
 					background-repeat: no-repeat;
-					background-size: 15px;
+					background-size: 25px;
 				}
 
 				.to-do-item {
 					display: flex;
 					align-items: center;
-					flex-direction: row;
-					justify-content: space-between;
-					margin: 8px 0 12px;
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+					margin: 18px 0 12px;
 				}
 
-				.to-do-item .text {
+				.to-do-item .body {
 					margin: 0;
-					margin-right: 12px;
+					margin-left: 12px;
 					text-align: left;
 					color: white;
 				}
 			</style>
-			<section id="things-to-do-before-i-die" class="min-height-fix">
-				<h2 class="text-left">Things I Still Want To Do Before I Die:</h2>
+			<section id="things-to-do-before-i-die" class="container">
+				<h2 class="heading">Things I Still Want To Do Before I Die:</h2>
 				<div class="to-do-items">
 					<div class="to-do-item">
-						<span class="text">GO TO OUTER SPACE- number one bucket list thing for me.</span>
+						<span class="body">GO TO OUTER SPACE- number one bucket list thing for me.</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text"
+						<span class="body"
 							>Get my MSW and work as a hospice chaplain (I think working around death will help me lead a better life.)</span
 						>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Study music theory at Berklee or somewhere good</span>
+						<span class="body">Study music theory at Berklee or somewhere good</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Take ear training at Berklee</span>
+						<span class="body">Take ear training at Berklee</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Intern for Richard Ryan</span>
+						<span class="body">Intern for Richard Ryan</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Win a Grammy</span>
+						<span class="body">Win a Grammy</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Walk across America - I’M DOING THAT THIS YEAR!</span>
+						<span class="body">Walk across America - I’M DOING THAT THIS YEAR!</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Mentor/produce a younger artist</span>
+						<span class="body">Mentor/produce a younger artist</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Read Infinite Jest - I’m DOING THAT NOW!</span>
+						<span class="body">Read Infinite Jest - I’m DOING THAT NOW!</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Spend a week in solitude - I DID THIS! TWICE!</span>
+						<span class="body">Spend a week in solitude - I DID THIS! TWICE!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!</span>
+						<span class="body">Get a platinum plaque - I DID THIS SIX TIMES!!! WOOO! For real, dreams come true! GO ME!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Do the Landmark Forum - I DID THIS IT WAS AWESOME!</span>
+						<span class="body">Do the Landmark Forum - I DID THIS IT WAS AWESOME!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Drink Ayahuasca - I DID THIS!</span>
+						<span class="body">Drink Ayahuasca - I DID THIS!</span>
 						<!-- display: block     -->
 						<input type="checkbox" checked="true" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Get married? have a kid?</span>
+						<span class="body">Get married? have a kid?</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Study film and create some bad ass film pieces</span>
+						<span class="body">Study film and create some bad ass film pieces</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Climb mount everest</span>
+						<span class="body">Climb mount everest</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="text">Take my mom to Namibia</span>
+						<span class="body">Take my mom to Namibia</span>
 						<!-- display: block     -->
 						<input type="checkbox" />
 					</div>

@@ -24,11 +24,12 @@ class Tour extends PageViewElement {
 
 		return html`
 			${SharedStyles}
-			<section class="min-height-fix">
-				<h2 class="text-left">Tour</h2>
-				<p>
+			<section class="container">
+				<h2 class="heading">Tour</h2>
+				<p class="jumbo">
 					I am spending this year walking across America :). That’s right, I’m walking…like with my feet…all the way across. It will take me
-					about a year. While I walk, I will be playing free surprise concerts for people. Follow me on instagram to keep up. @mikeposner
+					about a year. While I walk, I will be playing free surprise concerts for people. Follow me on instagram to keep up.
+					<a class="text-link text-white" href="http://mikeposner.co/instagram" target="_blank" rel="noreferrer">@mikeposner</a>
 				</p>
 			</section>
 		`;

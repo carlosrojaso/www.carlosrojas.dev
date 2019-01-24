@@ -12,6 +12,7 @@ import { html } from '@polymer/lit-element';
 import { repeat } from 'lit-html/directives/repeat.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 import { albums } from './favorite-albums-list.js';
+import { apple, spotify } from './my-icons.js';
 import { PageViewElement } from './page-view-element.js';
 import { SharedStyles } from './shared-styles.js';
 
@@ -26,110 +27,84 @@ class FavoriteAlbums extends PageViewElement {
 		return html`
 			${SharedStyles}
 			<style>
+				.heading {
+					margin-bottom: 0;
+				}
+
 				.albums {
-					width: 100%;
-					margin-top: 36px;
+					margin-top: 5rem;
 				}
 
-				.album {
-					width: 100%;
-					margin: 36px 0;
-					display: flex;
-					align-items: flex-start;
-					flex-direction: row;
-				}
-
-				.album a {
-					margin: 0;
+				.album:not(:first-of-type) {
+					margin-top: 5rem;
 				}
 
 				.album .cover {
-					width: 110px;
-					margin-right: 16px;
-					margin-left: 0;
+					max-width: 220px;
+					margin-bottom: 19px;
+				}
+
+				.album .cover img {
 					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
 				}
 
-				.album .cover:hover {
+				.album .cover img:hover {
+					transition: all 200ms ease;
 					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
 				}
 
-				.album .cover.alternate {
-					height: 110px;
-					position: relative;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
+				.album .heading {
+					font-size: 32px;
+					line-height: 38px;
+					font-size: 25px;
+					line-height: 32px;
+					margin: 0 auto;
+					text-decoration: none;
 				}
 
-				.album .cover.alternate:after {
-					content: 'we never made a cover';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-					background-color: white;
-					color: var(--app-primary-color);
+				.album .year {
+					margin-top: 0;
 				}
 
 				.album .copy {
-					width: 100%;
-					padding: 4px;
-					padding-top: 0;
-					font-size: 14px;
-					margin: 0;
-				}
-
-				.album .title,
-				.album .year {
-					color: var(--app-secondary-color);
-					font-weight: bold;
-				}
-
-				.album .title {
-					margin: 8px 0;
 					margin-top: 0;
-					font-size: 18px;
 				}
 
-				.album .text {
-					font-size: 11px;
+				.album .listening-options,
+				.album .listening-options a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: row;
 				}
 
-				@media (min-width: 660px) {
-					.album {
-						margin: 64px 0;
-					}
+				.album .listening-options a {
+					width: 35px;
+					height: 35px;
+					background: var(--app-secondary-color);
+					border-radius: 50%;
+					text-align: center;
+					flex-direction: column;
+					box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
+				}
 
-					.album .cover {
-						width: 220px;
-					}
+				.album .listening-options a:hover {
+					transition: all 200ms ease;
+					box-shadow: 0 10px 22px 6px rgba(0, 0, 0, 0.2);
+				}
 
-					.album .cover.alternate {
-						height: 220px;
-					}
+				.album .listening-options a:not(:last-of-type) {
+					margin-right: 1rem;
+				}
 
-					.album .year {
-						font-size: 22px;
-					}
-
-					.album .title {
-						font-size: 28px;
-					}
-
-					.album .text {
-						font-size: 16px;
-					}
+				.album .listening-options a svg {
+					width: 20px;
+					height: 20px;
+					fill: var(--app-tertiary-color);
 				}
 			</style>
-			<section id="favorite-albums" class="min-height-fix">
-				<h2 class="text-left">My Favorite Albums of All Time</h2>
+			<section id="favorite-albums" class="container">
+				<h2 class="heading">My Favorite Albums of All Time</h2>
 				<div class="albums">
 					${
 						repeat(
@@ -137,7 +112,13 @@ class FavoriteAlbums extends PageViewElement {
 							album => html`
 								<div class="album">
 									<!-- display: block -->
-									<a href="${album.url}" target="_blank" rel="noreferrer" aria-label="${album.title}">
+									<a
+										class="cover d-table mx-auto"
+										href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+										target="${album.spotifyUrl ? '_blank' : ''}"
+										rel="noreferrer"
+										aria-label="${album.title}"
+									>
 										<picture>
 											<!-- Use WebP on Supported Browsers -->
 											<source
@@ -146,13 +127,38 @@ class FavoriteAlbums extends PageViewElement {
 											/>
 											<source srcset="images/${album.svg ? '' : 'jpg/'}${album.cover}" type="image/${album.svg ? 'svg' : 'jpg'}" />
 											<!-- Falls back to JPG on Unsupported Browsers -->
-											<img class="cover" width="100%" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
+											<img width="220px" src="images/${album.svg ? '' : 'jpg/'}${album.cover}" alt="${album.title}" />
 										</picture>
 									</a>
-									<div class="copy">
-										<div class="year">${album.year}</div>
-										<div class="title">${album.title}</div>
-										<div class="text">${album.copy}</div>
+									<a
+										class="body heading"
+										href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+										target="${album.spotifyUrl ? '_blank' : ''}"
+										rel="noreferrer"
+										aria-label="${album.title}"
+									>
+										<div class="heading text-uppercase">${album.title}</div>
+									</a>
+									<div class="body year text-uppercase">${album.artist}</div>
+									<div class="listening-options">
+										<a
+											class="spotify ${album.spotifyUrl ? 'show' : 'hide'}"
+											href="${album.spotifyUrl ? album.spotifyUrl : '/discography'}"
+											target="${album.spotifyUrl ? '_blank' : ''}"
+											rel="noreferrer"
+											aria-label="${album.title}"
+										>
+											${spotify}
+										</a>
+										<a
+											class="apple-music ${album.appleMusicUrl ? 'show' : 'hide'}"
+											href="${album.appleMusicUrl ? album.appleMusicUrl : '/discography'}"
+											target="${album.appleMusicUrl ? '_blank' : ''}"
+											rel="noreferrer"
+											aria-label="${album.title}"
+										>
+											${apple}
+										</a>
 									</div>
 								</div>
 							`
