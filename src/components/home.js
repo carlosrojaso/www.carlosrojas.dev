@@ -32,8 +32,8 @@ class Home extends PageViewElement {
 				}
 
 				p.text-center {
-					margin-top: 4rem;
-					margin-bottom: 4rem;
+					margin-top: 4rem !important;
+					margin-bottom: 4rem !important;
 				}
 
 				@media (max-width: 1600px) {
