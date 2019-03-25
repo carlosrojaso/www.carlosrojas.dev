@@ -29,11 +29,29 @@ class Mission extends PageViewElement {
 						font-size: 42px;
 						line-height: 42px;
 					}
+
+					.jumbo {
+						font-size: 24px;
+					}
 				}
 			</style>
 			<section class="container">
 				<h2 class="heading">My Mission</h2>
-				<p class="jumbo">My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p>
+				<!-- <p class="jumbo">My mission is enjoy my life and help others enjoy theirs. Also, be as kind to other people as possible.</p> -->
+				<p class="jumbo">
+					My mission is to:
+					<br />
+					1) Enjoy my life and help others enjoy theirs.
+					<br />
+					2) Be as kind to other people as possible along the way.
+					<br />
+					3) Help others experience transcendence.
+				</p>
+				<!-- <ol>
+						<li>Enjoy my life and help others enjoy theirs.</li>
+						<li>Be as kind to other people as possible along the way.</li>
+						<li>Help others experience transcendence.</li>
+					</ol> -->
 			</section>
 		`;
 	}

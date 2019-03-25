@@ -124,9 +124,9 @@ class ToDo extends PageViewElement {
 						<input type="checkbox" />
 					</div>
 					<div class="to-do-item">
-						<span class="body">Read Infinite Jest - I’m DOING THAT NOW!</span>
+						<span class="body">Read Infinite Jest</span>
 						<!-- display: block     -->
-						<input type="checkbox" />
+						<input type="checkbox" checked="true" />
 					</div>
 					<div class="to-do-item">
 						<span class="body">Spend a week in solitude - I DID THIS! TWICE!</span>
