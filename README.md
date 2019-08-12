@@ -15,7 +15,7 @@ This template gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
-Based on: (PWA Starter Kit)[https://pwa-starter-kit.polymer-project.org/overview]
+Based on: https://pwa-starter-kit.polymer-project.org/overview
 
 ## Deploy
 
