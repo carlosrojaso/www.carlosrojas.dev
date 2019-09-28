@@ -16,8 +16,8 @@ import { SharedStyles } from './shared-styles.js';
 class Home extends PageViewElement {
 	render() {
 		updateMetadata({
-			title: `Mike Posner - Home`,
-			description: 'Official Website for Mike Posner. A Real Good Kid Available Jan. 18th.',
+			title: `Carlos Rojas - Home`,
+			description: 'Official Website for Carlos Rojas. Javascript Developer 👨‍💻, Writer ✍️, Gamer 🎮, Photographer 📷.',
 		});
 
 		return html`
@@ -26,14 +26,14 @@ class Home extends PageViewElement {
 				#home {
 					background: white;
 				}
-				.state-map {
-					margin-top: 4rem;
-					margin-bottom: 4rem;
-				}
 
 				p.text-center {
 					margin-top: 4rem !important;
 					margin-bottom: 4rem !important;
+				}
+
+				img {
+					border-radius: 50%;
 				}
 
 				@media (max-width: 1600px) {
@@ -47,12 +47,10 @@ class Home extends PageViewElement {
 				}
 			</style>
 			<section id="home" class="container">
-				<div class="logo text-center"><img width="100%" src="images/posner-walk.svg" alt="Logo" /></div>
+				<div class="logo text-center"><img width="100%" src="images/jpg/profile-photo.jpg" alt="Logo" /></div>
 				<p class="text-center">
-					In 2019, I will be walking from the Atlantic Ocean to the Pacific Ocean. The journey will take me most of my 31st year. You are
-					welcome to join. I'll be announcing details soon 😊🦁✨🌼🌳🤴.
+					I am a JavaScript Developer 👨‍💻. I enjoy writing about things ✍️, mainly Science Fiction 👽, Patterns 🎲, and JavaScript 🤓.
 				</p>
-				<div class="container state-map"><img width="100%" src="images/state-map.svg" alt="Logo" /></div>
 			</section>
 		`;
 	}

@@ -1,9 +1,6 @@
 {
-	"name": "mike-posner",
-	"version": "0.9.0",
-	"contributors": [
-		"The Polymer Authors"
-	],
+	"name": "carlos-rojas",
+	"version": "1.0.0",
 	"license": "BSD-3-Clause",
 	"repository": "Polymer/pwa-starter-kit",
 	"scripts": {

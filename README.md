@@ -1,6 +1,6 @@
 [![Built with pwa–starter–kit](https://img.shields.io/badge/built_with-pwa–starter–kit_-blue.svg)](https://github.com/Polymer/pwa-starter-kit 'Built with pwa–starter–kit')
 
-# Official Website for Mike Posner
+# Official Website for Carlos Rojas
 
 This template gives you the following features:
 

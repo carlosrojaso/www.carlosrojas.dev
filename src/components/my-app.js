@@ -22,7 +22,7 @@ import { installRouter } from 'pwa-helpers/router';
 import { navigate, updateDrawerState, updateOffline } from '../actions/app.js';
 import { store } from '../store.js';
 import { HeaderAndFooterStyles } from './header-and-footer-styles.js';
-import { facebook, instagram, menuIcon, mikePosner, spotify, tumblr, twitter, youtube } from './my-icons.js';
+import { menuIcon, mikePosner } from './my-icons.js';
 import { SharedStyles } from './shared-styles.js';
 import './snack-bar.js';
 
@@ -67,69 +67,36 @@ class MyApp extends connect(store)(LitElement) {
 			<!-- Drawer content -->
 			<app-drawer .opened="${this._drawerOpened}" @opened-changed="${this._drawerOpenedChanged}">
 				<nav class="drawer-list">
-					<a ?selected="${this._page === 'mission'}" href="/mission">Mission</a>
-					<a ?selected="${this._page === 'join-the-walk'}" href="/join-the-walk">Join The Walk</a>
-					<a ?selected="${this._page === 'tour'}" href="/tour">Tour</a>
-					<a ?selected="${this._page === 'discography'}" href="/discography">Discography</a>
-					<a ?selected="${this._page === 'my-favorite-albums-of-all-time'}" href="/my-favorite-albums-of-all-time"
-						>My Favorite Albums of All Time</a
-					>
-					<a ?selected="${this._page === 'reading-list'}" href="/reading-list">Reading List</a>
-					<a
-						?selected="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
-						href="/random-and-subtly-pretentious-list-of-accomplishments"
-						>Random and Subtly Pretentious List of Accomplishments</a
-					>
-					<a ?selected="${this._page === 'things-i-want-to-do-before-i-die'}" href="/things-i-want-to-do-before-i-die"
-						>Things I Want To Do Before I Die</a
-					>
-					<a href="http://amorfatimusicacademy.org/" target="_blank" rel="noreferrer">Amor Fati</a>
-					<a ?selected="${this._page === 'listen'}" href="/listen">Listen</a>
-					<a ?selected="${this._page === 'about'}" href="/about-me">About Me</a>
+					<a ?selected="${this._page === 'books'}" href="/books">Books</a>
+					<a ?selected="${this._page === 'discography'}" href="/discography">Services</a>
+					<a ?selected="${this._page === 'products'}" href="/my-favorite-albums-of-all-time">Products</a>
 				</nav>
 			</app-drawer>
 
 			<!-- Main content -->
 			<main role="main" class="main-content">
 				<my-home class="page" ?active="${this._page === 'home'}"></my-home>
-				<my-mission class="page" ?active="${this._page === 'mission'}"></my-mission>
-				<my-join class="page" ?active="${this._page === 'join-the-walk'}"></my-join>
+				<my-books class="page" ?active="${this._page === 'books'}"></my-books>
 				<my-tour class="page" ?active="${this._page === 'tour'}"></my-tour>
 				<my-discography class="page" ?active="${this._page === 'discography'}"></my-discography>
 				<my-favorite-albums class="page" ?active="${this._page === 'my-favorite-albums-of-all-time'}"></my-favorite-albums>
-				<my-reading-list class="page" ?active="${this._page === 'reading-list'}"></my-reading-list>
-				<my-accomplishments
-					class="page"
-					?active="${this._page === 'random-and-subtly-pretentious-list-of-accomplishments'}"
-				></my-accomplishments>
-				<my-todo class="page" ?active="${this._page === 'things-i-want-to-do-before-i-die'}"></my-todo>
-				<my-listen class="page" ?active="${this._page === 'listen'}"></my-listen>
-				<my-about class="page" ?active="${this._page === 'about-me'}"></my-about>
-				<my-download class="page" ?active="${this._page === 'download'}"></my-download>
 				<my-404 class="page" ?active="${this._page === '404'}"></my-404>
 			</main>
 
 			<footer>
-				<p class="copyright">&copy; 2019 Mike Posner Offical Website. All Rights Reserved.</p>
-				<nav class="footer-list">
-					<a target="_blank" rel="noreferrer" href="http://privacypolicy.umusic.com/">Privacy Policy</a>
-					<a target="_blank" rel="noreferrer" href="http://privacypolicy.umusic.com/terms/">Terms of Use</a>
-				</nav>
+				<p class="copyright">Carlos Rojas. All Rights Reserved.</p>
 				<nav class="affiliate-links">
-					<a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/">Shop</a>
+					<a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/">Patreon</a>
 					<a target="_blank" rel="noreferrer" href="http://whatdoesthisallmeanpodcast.com/">Podcast</a>
-					<a target="_blank" rel="noreferrer" href="https://www.teardropsandballoons.com/">Poetry</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog">Blog</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Hate Mail</a>
+					<a target="_blank" rel="noreferrer" href="https://www.teardropsandballoons.com/">Gumroad</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog">Youtube</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Quora</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Twitter</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Instagram</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Github</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">StackOverflow</a>
+					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">linkedin</a>
 				</nav>
-				<div class="social-links">
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/youtube" aria-label="youtube">${youtube}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/twitter" aria-label="twitter">${twitter}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/instagram" aria-label="instagram">${instagram}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/facebook" aria-label="facebook">${facebook}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/tumblr" aria-label="tumblr">${tumblr}</a></div>
-					<div><a target="_blank" rel="noreferrer" href="http://mikeposner.co/posnerspotify" aria-label="spotify">${spotify}</a></div>
-				</div>
 			</footer>
 
 			<snack-bar ?active="${this._snackbarOpened}"> You are now ${this._offline ? 'offline' : 'online'}.</snack-bar>

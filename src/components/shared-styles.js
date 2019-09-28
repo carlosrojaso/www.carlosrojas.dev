@@ -17,9 +17,9 @@ export const SharedStyles = html`
 			box-sizing: border-box;
 
 			/* Variables */
-			--app-primary-color: #ff6b00;
-			--app-secondary-color: #f1d09f;
-			--app-tertiary-color: #673918;
+			--app-primary-color: #150259;
+			--app-secondary-color: #f2cb05;
+			--app-tertiary-color: #c5a7d9;
 			--app-dark-text-color: var(--app-tertiary-color);
 			--app-light-text-color: var(--app-secondary-color);
 			--app-section-odd-color: white;

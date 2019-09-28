@@ -37,8 +37,8 @@ const loadPage = page => dispatch => {
 		case 'mission':
 			import('../components/mission.js');
 			break;
-		case 'join-the-walk':
-			import('../components/join.js');
+		case 'books':
+			import('../components/books.js');
 			break;
 		case 'tour':
 			import('../components/tour.js');
