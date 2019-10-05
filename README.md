@@ -15,6 +15,8 @@ This template gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
+Based on: https://pwa-starter-kit.polymer-project.org/overview
+
 ## Deploy
 
 `npm run build:firebase`
