@@ -28,12 +28,14 @@ class Home extends PageViewElement {
 				}
 
 				p.text-center {
+					font-size: 1.6rem;
+					color: #666;
 					margin-top: 4rem !important;
 					margin-bottom: 4rem !important;
 				}
 
 				img {
-					border-radius: 50%;
+					margin: 50px;
 				}
 
 				@media (max-width: 1600px) {
@@ -47,7 +49,7 @@ class Home extends PageViewElement {
 				}
 			</style>
 			<section id="home" class="container">
-				<div class="logo text-center"><img width="100%" src="images/jpg/profile-photo.jpg" alt="Logo" /></div>
+				<div class="logo text-center"><img width="60%" src="images/original/png/logoHead.png" alt="Logo" /></div>
 				<p class="text-center">
 					I am a JavaScript Developer 👨‍💻. I enjoy writing about things ✍️, mainly Science Fiction 👽, Patterns 🎲, and JavaScript 🤓.
 				</p>

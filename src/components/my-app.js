@@ -51,6 +51,11 @@ class MyApp extends connect(store)(LitElement) {
 					padding-top: 64px;
 				}
 
+				.typo {
+					margin: 15px;
+					width: 15%;
+				}
+
 				app-drawer {
 					z-index: 4000;
 				}
@@ -60,7 +65,9 @@ class MyApp extends connect(store)(LitElement) {
 			<app-header class="show" condenses reveals effects="waterfall">
 				<app-toolbar class="toolbar-top">
 					<button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
-					<div main-title><a href="/" aria-label="Mike Posner">${mikePosner}</a></div>
+					<div main-title>
+						<a href="/" aria-label="Mike Posner"><img class="typo" src="images/original/png/logo.png" alt="Logo"/></a>
+					</div>
 				</app-toolbar>
 			</app-header>
 
