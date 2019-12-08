@@ -75,8 +75,7 @@ class MyApp extends connect(store)(LitElement) {
 			<app-drawer .opened="${this._drawerOpened}" @opened-changed="${this._drawerOpenedChanged}">
 				<nav class="drawer-list">
 					<a ?selected="${this._page === 'books'}" href="/books">Books</a>
-					<a ?selected="${this._page === 'discography'}" href="/discography">Services</a>
-					<a ?selected="${this._page === 'products'}" href="/my-favorite-albums-of-all-time">Products</a>
+					<a href="https://market.ionicframework.com/user/8505" target-"_blank">Products</a>
 				</nav>
 			</app-drawer>
 
@@ -84,25 +83,23 @@ class MyApp extends connect(store)(LitElement) {
 			<main role="main" class="main-content">
 				<my-home class="page" ?active="${this._page === 'home'}"></my-home>
 				<my-books class="page" ?active="${this._page === 'books'}"></my-books>
-				<my-tour class="page" ?active="${this._page === 'tour'}"></my-tour>
-				<my-discography class="page" ?active="${this._page === 'discography'}"></my-discography>
-				<my-favorite-albums class="page" ?active="${this._page === 'my-favorite-albums-of-all-time'}"></my-favorite-albums>
 				<my-404 class="page" ?active="${this._page === '404'}"></my-404>
 			</main>
 
 			<footer>
-				<p class="copyright">Carlos Rojas. All Rights Reserved.</p>
+				<p class="copyright">Carlos Rojas. 2020.</p>
 				<nav class="affiliate-links">
-					<a target="_blank" rel="noreferrer" href="https://shopmikeposner.com/">Patreon</a>
-					<a target="_blank" rel="noreferrer" href="http://whatdoesthisallmeanpodcast.com/">Podcast</a>
-					<a target="_blank" rel="noreferrer" href="https://www.teardropsandballoons.com/">Gumroad</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/blog">Youtube</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Quora</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Twitter</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Instagram</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">Github</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">StackOverflow</a>
-					<a target="_blank" rel="noreferrer" href="http://mikeposner.co/hate">linkedin</a>
+					<a target="_blank" rel="noreferrer" href="https://www.patreon.com/carlosrojas_o">Patreon</a>
+					<a target="_blank" rel="noreferrer" href="https://podcast.maestriajs.com">Podcast</a>
+					<a target="_blank" rel="noreferrer" href="https://gumroad.com/carlosrojas_o">Gumroad</a>
+					<a target="_blank" rel="noreferrer" href="http://j.mp/ytcarlos">Youtube</a>
+					<a target="_blank" rel="noreferrer" href="https://es.quora.com/profile/Carlos-Rojas-19">Quora</a>
+					<a target="_blank" rel="noreferrer" href="https://mobile.twitter.com/carlosrojas_o">Twitter</a>
+					<a target="_blank" rel="noreferrer" href="https://www.instagram.com/carlosrojas_o/">Instagram</a>
+					<a target="_blank" rel="noreferrer" href="https://github.com/carlosrojaso">Github</a>
+					<a target="_blank" rel="noreferrer" href="https://stackoverflow.com/users/3092766/carlos-rojas">StackOverflow</a>
+					<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/carlosrojaso/">linkedin</a>
+					<a target="_blank" rel="noreferrer" href="https://linktr.ee/carlosrojas_o">Super Links</a>
 				</nav>
 			</footer>
 
