@@ -75,7 +75,8 @@ class MyApp extends connect(store)(LitElement) {
 			<app-drawer .opened="${this._drawerOpened}" @opened-changed="${this._drawerOpenedChanged}">
 				<nav class="drawer-list">
 					<a ?selected="${this._page === 'books'}" href="/books">Books</a>
-					<a href="https://market.ionicframework.com/user/8505" target-"_blank">Products</a>
+					<a href="https://market.ionicframework.com/user/8505" target="_blank">Products</a>
+					<a href="https://codepen.io/carlosrojaso/posts/" target="_blank">Blog</a>
 				</nav>
 			</app-drawer>
 
