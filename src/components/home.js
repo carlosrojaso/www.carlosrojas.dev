@@ -17,7 +17,7 @@ class Home extends PageViewElement {
 	render() {
 		updateMetadata({
 			title: `Carlos Rojas - Home`,
-			description: 'Official Website for Carlos Rojas. Javascript Developer 👨‍💻, Writer ✍️, Gamer 🎮, Photographer 📷.',
+			description: 'Official Website for Carlos Rojas. Javascript Developer, Writer.',
 		});
 
 		return html`

@@ -17,8 +17,8 @@ import { SharedStyles } from './shared-styles.js';
 class MyView404 extends PageViewElement {
 	render() {
 		updateMetadata({
-			title: `Mike Posner - Random and Subtly Pretentious List of Accomplishments`,
-			description: 'Random and Subtly Pretentious List of Accomplishments',
+			title: `Carlos Rojas - Home`,
+			description: 'Official Website for Carlos Rojas. Javascript Developer, Writer.',
 		});
 
 		return html`
