@@ -8,7 +8,7 @@ const compression = require('compression');
 const app = express();
 
 const rendertronMiddleware = rendertron.makeMiddleware({
-	proxyUrl: 'https://render-tron.appspot.com/render',
+	proxyUrl: 'https://ssr.carlosrojas.dev/render',
 	injectShadyDom: true,
 });
 
@@ -16,7 +16,7 @@ app
 	.use(compression())
 	.use(minify())
 	.use((req, res, next) => {
-		req.headers['host'] = 'carlosrojas-dev.firebaseapp.com';
+		req.headers['host'] = 'carlosrojas.dev';
 		return rendertronMiddleware(req, res, next);
 	});
 
