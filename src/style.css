@@ -953,7 +953,6 @@ main .contact{
     }
 }
 
-/* Disabling animation
 .bg-bubbles {
     position: absolute;
     top: 0;
@@ -1052,5 +1051,3 @@ main .contact{
         transform: translateY(-1500px) rotate(600deg);
     }
   }
-
-*/
